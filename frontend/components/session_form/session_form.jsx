@@ -48,6 +48,15 @@ class SessionForm extends React.Component {
     render() {
         const signupForm = () => {
             return (
+                <div>
+                <div className="modal-input">
+                    <input type='text'
+                        placeholder="Email"
+                        value={this.state.email}
+                        onChange={this.update('email')}
+                        className='login-input'
+                    />
+                </div>
                 <div className="modal-input">
                     <input type='text'
                         placeholder="Age"
@@ -55,6 +64,7 @@ class SessionForm extends React.Component {
                         onChange={this.update('age')}
                         className='login-input'
                     />
+                </div>
                 </div>
             )
         }

@@ -1,20 +1,37 @@
 class Api::BoardsController < ApplicationController
     def index
-        render json: Board.all.where(user_id: current_user.id)
+        @boards = Board.all
+        render :index
     end
 
     def show
-        render json: Todo.find(params[:id])
+        @board = Board.find(params[:id])
+        render :show
     end
 
     def create
-        
+        @board = Board.new(board_params)
+
+        if @board.save
+            render :show
+        else
+            render json: @board.errors.full_messages, status: 422
+        end
     end
 
     def update
+        @board = Board.find(params[:id])
+        if @board.update(board_params)
+            render:show
+        else
+            render json: @board.errors.full_messages, status: 422
+        end
     end
 
     def destroy
+        @board = Board.find(params[:id])
+        @board.destroy
+        render :index
     end
 
     private

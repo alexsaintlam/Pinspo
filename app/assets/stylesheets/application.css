@@ -245,3 +245,22 @@
     display: block;
 }
 
+.splash-body {
+
+}
+
+.splash-container {
+    column-count: 7;
+    column-gap: 4px;
+}
+
+.splash-container > img {
+    box-sizing: border-box;
+    width: 100%;
+    cursor: zoom-in;
+    border-radius: 16px;
+    object-fit: cover;
+    padding: 8px;
+    width: 236px;
+}
+

@@ -10,6 +10,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
+      {
         test: [/\.jsx?$/],
 
         exclude: /(node_modules)/,
@@ -29,5 +33,10 @@ module.exports = {
 
   resolve: {
     extensions: [".js", ".jsx", "*"],
+    alias: {
+      Images: path.resolve(__dirname, 'app', 'assets', 'images'),
+    },
   },
 };
+
+
