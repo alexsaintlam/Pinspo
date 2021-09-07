@@ -204,3 +204,44 @@
      right: 15px;
      cursor: pointer;
  }
+
+.icon {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    color: #767676;
+}
+
+.searchbar {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    background-color: #efefef;
+    height: 48px;
+    width: 100%;
+    border-radius: 50px;
+    border: none;
+    padding-left: 10px;
+}
+
+.search-input > input {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    margin-left: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropConent {
+    display: none;
+}
+
+.nav-dropdown:hover .nav-dropConent {
+    display: block;
+}
+
