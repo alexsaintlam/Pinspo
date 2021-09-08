@@ -4,9 +4,8 @@ import PinterestIcon from '@material-ui/icons/Pinterest';
 import SearchIcon from '@material-ui/icons/Search';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import SmsIcon from '@material-ui/icons/Sms';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
-const Greeting = ({ currentUser, logout, openModal }) => {
+const Greeting = ({ currentUser, openModal }) => {
     const signedOutNav = () => (
         <div className="navbar">
             <div className="nav-icon"><PinterestIcon style={{ fontSize: 40 }} /></div>
