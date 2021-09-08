@@ -1,4 +1,5 @@
 import React from 'react';
+import NavDrop from './navDrop';
 import PinterestIcon from '@material-ui/icons/Pinterest';
 import SearchIcon from '@material-ui/icons/Search';
 import NotificationsIcon from '@material-ui/icons/Notifications';
@@ -35,12 +36,7 @@ const Greeting = ({ currentUser, logout, openModal }) => {
             </div>
             <div className="icon"><NotificationsIcon /></div>
             <div className="icon"><SmsIcon /></div>
-            <div className="nav-dropdown">
-                <div className="icon"><ExpandMoreIcon /></div>
-                <div className="nav-dropConent">
-                    <button className="header-button" onClick={logout}>Log Out</button>
-                </div>
-            </div>
+            <NavDrop />
         </div>
     )
     

@@ -1,21 +1,18 @@
 import React from 'react';
-import Photo1 from '../../../app/assets/images/photo1.jpg';
-import Photo2 from '../../../app/assets/images/photo2.jpg';
-import Photo3 from '../../../app/assets/images/photo3.jpg';
-import Photo4 from '../../../app/assets/images/photo4.jpg';
-import Photo5 from '../../../app/assets/images/photo5.jpg';
-import Photo6 from '../../../app/assets/images/photo6.jpg';
-import Photo7 from '../../../app/assets/images/photo7.jpg';
-import Photo8 from '../../../app/assets/images/photo8.jpg';
-import Photo9 from '../../../app/assets/images/photo9.jpg';
-import Photo11 from '../../../app/assets/images/photo11.jpg';
+import Photo1 from '../../../app/assets/images/splash_page_3/photo1.jpg';
+import Photo2 from '../../../app/assets/images/splash_page_3/photo2.jpg';
+import Photo3 from '../../../app/assets/images/splash_page_3/photo3.jpg';
+import Photo4 from '../../../app/assets/images/splash_page_3/photo4.jpg';
+import Photo5 from '../../../app/assets/images/splash_page_3/photo5.jpg';
+import Photo6 from '../../../app/assets/images/splash_page_3/photo6.jpg';
 
-const SplashPage1 = () => {
+const SplashPage2 = () => {
     return (
         <div className="splash-body">
+            <h2 className="splash3-h2">new best friend</h2>
             <div className="splash-house">
                 <div className="splash-container1">
-                    <img src={Photo3} />
+                    <img src={Photo1} />
                     <img src={Photo2} />
                     <img src={Photo3} />
                 </div>
@@ -29,41 +26,41 @@ const SplashPage1 = () => {
             </div>
             <div className="splash-house">
                 <div className="splash-container3">
-                    <img src={Photo7} />
-                    <img src={Photo8} />
-                    <img src={Photo9} />
+                    <img src={Photo1} />
+                    <img src={Photo2} />
+                    <img src={Photo3} />
                 </div>
             </div>
             <div className="splash-house">
                 <div className="splash-container4">
-                    <img src={Photo3} />
-                    <img src={Photo3} />
-                    <img src={Photo3} />
-                </div>
-            </div>
-            <div className="splash-house">
-                <div className="splash-container3">
-                    <img src={Photo3} />
                     <img src={Photo4} />
                     <img src={Photo5} />
-                </div>
-            </div>
-            <div className="splash-house">
-                <div className="splash-container2">
                     <img src={Photo6} />
-                    <img src={Photo7} />
-                    <img src={Photo8} />
                 </div>
             </div>
             <div className="splash-house">
-                <div className="splash-container1">
-                    <img src={Photo9} />
-                    <img src={Photo11} />
+                <div className="splash-container5">
                     <img src={Photo1} />
+                    <img src={Photo2} />
+                    <img src={Photo3} />
+                </div>
+            </div>
+            <div className="splash-house">
+                <div className="splash-container6">
+                    <img src={Photo4} />
+                    <img src={Photo5} />
+                    <img src={Photo6} />
+                </div>
+            </div>
+            <div className="splash-house">
+                <div className="splash-container7">
+                    <img src={Photo1} />
+                    <img src={Photo2} />
+                    <img src={Photo3} />
                 </div>
             </div>
         </div>
     )
 }
 
-export default SplashPage1;
+export default SplashPage2;
