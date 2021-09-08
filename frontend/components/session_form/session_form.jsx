@@ -81,7 +81,7 @@ class SessionForm extends React.Component {
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className='login-form-box'>
-                    <div className="modal-icon"><PinterestIcon /></div>
+                    <div className="modal-icon"><PinterestIcon style={{ fontSize: 37 }}/></div>
                     <div className="modal-head">Welcome to Pinterest</div>
                     {this.props.formType === 'signup' ? 
                         <div>Find new ideas to try</div> : null}

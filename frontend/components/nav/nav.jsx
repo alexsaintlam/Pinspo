@@ -8,7 +8,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 const Greeting = ({ currentUser, logout, openModal }) => {
     const signedOutNav = () => (
         <div className="navbar">
-            <div className="nav-icon"><PinterestIcon /></div>
+            <div className="nav-icon"><PinterestIcon style={{ fontSize: 40 }} /></div>
             <div className="nav-header">Pinspo</div>
             <div className="nav-fil"></div>
             <a href="url">About</a>
