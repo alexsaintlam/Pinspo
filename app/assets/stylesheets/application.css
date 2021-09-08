@@ -101,6 +101,10 @@
     padding: 8px 12px 8px 12px;
 }
 
+.login-button:hover {
+    background-color: #ad081b;
+}
+
 .signup-button {
     display: flex;
     border: 0;
@@ -116,6 +120,11 @@
     font-weight: 700;
     padding: 8px 12px 8px 12px;
 }
+
+.signup-button:hover {
+    background-color: #e2e2e2;
+}
+
 
  .modal-background {
      position: fixed;
@@ -235,6 +244,11 @@
     align-items: center;
     padding-left: 15px;
     color: #767676;
+    cursor: pointer;
+}
+
+.icon:hover {
+    background-color: #efefef;
 }
 
 .searchbar {
@@ -264,17 +278,54 @@
     align-items: center;
     padding-left: 15px;
     color: #767676;
+    cursor: pointer;
+}
+
+.drop-icon:hover {
+    background-color: #efefef;
+}
+
+.nav-drop {
+    position: absolute;
+    left: 85.5%;
+    background-color: white;
+    border-radius: 8px;
+    width: 272px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .nav-dropContent {
-    position: absolute;
-    left: 85%;
-    background-color: white;
-    border-radius: 8px;
-    padding: 4px;
-    width: 100px;
+    display: flex;
     cursor: pointer;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    align-items: center;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 0px 8px 0px 8px;
+    border-radius: 8px;
+    min-height: 35px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.last-nav-dropContent {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 0px 8px 8px 8px;
+    border-radius: 8px;
+    min-height: 35px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.nav-dropContent:hover {
+    background-color: #efefef;
+}
+
+.last-nav-dropContent:hover {
+    background-color: #efefef;
 }
 
 .splash-body {

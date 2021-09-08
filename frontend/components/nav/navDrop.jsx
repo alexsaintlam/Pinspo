@@ -14,7 +14,7 @@ class NavDrop extends React.Component {
 
     showMenu(e) {
         e.preventDefault();
-        this.setState({ showMenu: true })
+        this.state.showMenu ? this.setState({ showMenu: false }) : this.setState({ showMenu: true })
     }
 
     closeMenu(e) {
@@ -25,9 +25,13 @@ class NavDrop extends React.Component {
     render() {
         const dropMenu = () => {
             return(
-                
-                    <div className="nav-dropContent" onClick={this.props.logout}>Log Out</div>
-        
+                <div className="nav-drop">
+                    <div className="nav-dropContent">Settings</div>
+                    <div className="nav-dropContent">Tune your home feed</div>
+                    <div className="nav-dropContent">Get help</div>
+                    <div className="nav-dropContent">See terms and privacy</div>
+                    <div className="last-nav-dropContent" onClick={this.props.logout}>Log out</div>
+                </div>
             )
         }
         return (
