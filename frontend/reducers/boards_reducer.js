@@ -6,19 +6,19 @@ import {
 
 const boardsReducer = (state = {}, action) => {
     Object.freeze(state);
-    let nextState = {};
+    let nextState = Object.assign({}, state);
 
     switch(action.type) {
         case RECEIVE_BOARDS:
-            action.boards.forEach(board => {
+            let boardArr = Object.values(action.boards);
+            boardArr.forEach(board => {
                 nextState[board.id] = board;
             });
             return nextState;
         case RECEIVE_BOARD:
-            const newBoard = { [action.board.id]: action.board };
-            return Object.assign({}, state, newBoard);
+            nextState[action.board.id] = action.board
+            return nextState;
         case REMOVE_BOARD:
-            nextState = Object.assign({}, state);
             delete nextState[action.board.id];
             return nextState;
         default:

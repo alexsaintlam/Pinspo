@@ -7,3 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 board1 = Board.create!(name: "testName1", description: "testDesc1", public: true, user_id: 1)
+board2 = Board.create!(name: "testName2", description: "testDesc2", public: true, user_id: 1)
