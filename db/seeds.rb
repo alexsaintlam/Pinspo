@@ -5,6 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Board.destroy_all
+    board1 = Board.create!(name: "boardName1", description: "boardDesc1", public: true, user_id: 1)
+    board2 = Board.create!(name: "boardName2", description: "boardDesc2", public: true, user_id: 1)
 
-board1 = Board.create!(name: "testName1", description: "testDesc1", public: true, user_id: 1)
-board2 = Board.create!(name: "testName2", description: "testDesc2", public: true, user_id: 1)
+Pin.destroy_all
+    pin1 = Pin.create!(title: "pinTitle1", description: "pinDesc1", organized: true, user_id: 1)
+    pin2 = Pin.create!(title: "pinTitle2", description: "pinDesc2", organized: true, user_id: 1)
+    pin3 = Pin.create!(title: "pinTitle3", description: "pinDesc3", organized: true, user_id: 1)

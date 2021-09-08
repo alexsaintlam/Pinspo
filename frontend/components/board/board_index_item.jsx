@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 const BoardIndexItem = (props) => {
     return (
-        <li>
+        <div>
             <Link to={`/boards/${props.board.id}`}>{props.board.name}</Link>
-        </li>
+        </div>
     )
 }
 

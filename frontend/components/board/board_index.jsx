@@ -11,7 +11,7 @@ class BoardIndex extends React.Component {
         const { boards, deleteBoard } = this.props;
         return (
             <div>
-                <ul>
+                <div>
                     {
                         boards.map(board => <BoardIndexItem
                                                     board={board}
@@ -20,7 +20,7 @@ class BoardIndex extends React.Component {
                                             />
                                     )
                     }
-                </ul>
+                </div>
             </div>
         )
     }
