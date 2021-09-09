@@ -36,9 +36,9 @@ User.destroy_all
     follow8 = Follow.create!(follower_id: user2.id, followed_id: user1.id)
     follow9 = Follow.create!(follower_id: user2.id, followed_id: user3.id)
 
-    pintoboard1 = Pinstoboard.create!(pin_id: user5.id, board_id: user5.id)
-    pintoboard2 = Pinstoboard.create!(pin_id: user1.id, board_id: user5.id)
-    pintoboard3 = Pinstoboard.create!(pin_id: user2.id, board_id: user5.id)
-    pintoboard4 = Pinstoboard.create!(pin_id: user5.id, board_id: user1.id)
-    pintoboard5 = Pinstoboard.create!(pin_id: user1.id, board_id: user1.id)
+    pintoboard1 = Pinstoboard.create!(pin_id: pin1.id, board_id: board1.id)
+    pintoboard2 = Pinstoboard.create!(pin_id: pin2.id, board_id: board1.id)
+    pintoboard3 = Pinstoboard.create!(pin_id: pin3.id, board_id: board1.id)
+    pintoboard4 = Pinstoboard.create!(pin_id: pin1.id, board_id: board2.id)
+    pintoboard5 = Pinstoboard.create!(pin_id: pin2.id, board_id: board2.id)
 
