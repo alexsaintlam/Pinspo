@@ -10,11 +10,12 @@ const boardsReducer = (state = {}, action) => {
 
     switch(action.type) {
         case RECEIVE_BOARDS:
-            let boardArr = Object.values(action.boards);
-            boardArr.forEach(board => {
-                nextState[board.id] = board;
-            });
-            return nextState;
+            // let boardArr = Object.values(action.boards);
+            // boardArr.forEach(board => {
+            //     nextState[board.id] = board;
+            // });
+            // return nextState;
+            return action.boards;
         case RECEIVE_BOARD:
             nextState[action.board.id] = action.board
             return nextState;

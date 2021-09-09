@@ -13,3 +13,7 @@ Pin.destroy_all
     pin1 = Pin.create!(title: "pinTitle1", description: "pinDesc1", organized: true, user_id: 1)
     pin2 = Pin.create!(title: "pinTitle2", description: "pinDesc2", organized: true, user_id: 1)
     pin3 = Pin.create!(title: "pinTitle3", description: "pinDesc3", organized: true, user_id: 1)
+
+Follow.destroy_all
+    follow1 = Follow.create!(follower_id: 1, followed_id: 2)
+    follow2 = Follow.create!(follower_id: 2, followed_id: 1)

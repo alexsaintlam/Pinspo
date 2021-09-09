@@ -10,11 +10,7 @@ const followsReducer = (state = {}, action) => {
 
     switch(action.type) {
         case RECEIVE_FOLLOWS:
-            let followArr = Object.values(action.follows);
-            followArr.forEach(follow => {
-                nextState[follow.id] = follow;
-            });
-            return nextState;
+            return action.follows;
         case RECEIVE_FOLLOW:
             nextState[action.follow.id] = action.follow
             return nextState;

@@ -1,4 +1,9 @@
 class Api::UsersController < ApplicationController
+    def show
+        @user = User.find_by(id: params[:id])
+        render :user
+    end
+
     def create
         @user = User.new(users_params)
 
