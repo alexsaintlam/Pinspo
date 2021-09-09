@@ -12,51 +12,51 @@ const SplashPage2 = () => {
             <h2 className="splash3-h2">new best friend</h2>
             <div className="splash-house">
                 <div className="splash-container1">
-                    <img src={placeholder3} />
-                    <img src={placeholder3} />
-                    <img src={placeholder3} />
+                    <img src={picture3} />
+                    <img src={picture3} />
+                    <img src={picture3} />
                 </div>
             </div>
             <div className="splash-house">
                 <div className="splash-container2">
-                    <img src={placeholder3} />
-                    <img src={placeholder3} />
-                    <img src={placeholder3} />
+                    <img src={picture3} />
+                    <img src={picture3} />
+                    <img src={picture3} />
                 </div>
             </div>
             <div className="splash-house">
                 <div className="splash-container3">
-                    <img src={placeholder3} />
-                    <img src={placeholder3} />
-                    <img src={placeholder3} />
+                    <img src={picture3} />
+                    <img src={picture3} />
+                    <img src={picture3} />
                 </div>
             </div>
             <div className="splash-house">
                 <div className="splash-container4">
-                    <img src={placeholder3} />
-                    <img src={placeholder3} />
-                    <img src={placeholder3} />
+                    <img src={picture3} />
+                    <img src={picture3} />
+                    <img src={picture3} />
                 </div>
             </div>
             <div className="splash-house">
                 <div className="splash-container5">
-                    <img src={placeholder3} />
-                    <img src={placeholder3} />
-                    <img src={placeholder3} />
+                    <img src={picture3} />
+                    <img src={picture3} />
+                    <img src={picture3} />
                 </div>
             </div>
             <div className="splash-house">
                 <div className="splash-container6">
-                    <img src={placeholder3} />
-                    <img src={placeholder3} />
-                    <img src={placeholder3} />
+                    <img src={picture3} />
+                    <img src={picture3} />
+                    <img src={picture3} />
                 </div>
             </div>
             <div className="splash-house">
                 <div className="splash-container7">
-                    <img src={placeholder3} />
-                    <img src={placeholder3} />
-                    <img src={placeholder3} />
+                    <img src={picture3} />
+                    <img src={picture3} />
+                    <img src={picture3} />
                 </div>
             </div>
         </div>
