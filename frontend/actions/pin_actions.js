@@ -36,5 +36,5 @@ export const updatePin = pin => dispatch => (
 );
 
 export const deletePin = pin => dispatch => (
-    PinAPIUtil.deletePin(pin).then(pin => dispatch(removePin(pin)))
+    PinAPIUtil.deletePin(pin).then(() => dispatch(removePin(pin)))
 );

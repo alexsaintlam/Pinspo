@@ -1,15 +1,15 @@
 import React from 'react';
 
-class BoardForm extends React.Component {
+class PinForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = this.props.board;
+        this.state = this.props.pin;
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.submitBoard(this.state);
+        this.props.submitPin(this.state);
         window.location.replace("#/")
     }
 
@@ -23,11 +23,11 @@ class BoardForm extends React.Component {
         return(
             <form onSubmit={this.handleSubmit} >
                 <h2>{this.props.formType}</h2>
-                <label>Name:
+                <label>Title:
                     <input
                         type="text"
-                        value={this.state.name}
-                        onChange={this.update('name')}>
+                        value={this.state.title}
+                        onChange={this.update('title')}>
                     </input>
                 </label>
                 <label>Description:
@@ -37,11 +37,11 @@ class BoardForm extends React.Component {
                         onChange={this.update('description')}>
                     </input>
                 </label>
-                <label>Public:
+                <label>Organized:
                     <input
                         type="text"
-                        value={this.state.public}
-                        onChange={this.update('public')}>
+                        value={this.state.organized}
+                        onChange={this.update('organized')}>
                     </input>
                 </label>
                 <input type="submit" value={this.props.formType}></input>
@@ -50,4 +50,4 @@ class BoardForm extends React.Component {
     }
 }
 
-export default BoardForm;
+export default PinForm;

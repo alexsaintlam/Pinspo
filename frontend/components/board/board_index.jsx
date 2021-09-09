@@ -1,6 +1,6 @@
 import React from 'react';
 import BoardIndexItem from './board_index_item';
-
+import { Link } from 'react-router-dom';
 
 class BoardIndex extends React.Component {
     componentDidMount() {
@@ -21,6 +21,7 @@ class BoardIndex extends React.Component {
                                     )
                     }
                 </div>
+                <Link to="/boards/new">New Board</Link>
             </div>
         )
     }

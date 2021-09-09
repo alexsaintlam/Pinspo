@@ -14,7 +14,7 @@ class BoardShow extends React.Component {
                 <div>{board.name}</div>
                 <div>{board.description}</div>
                 <div>{board.user_id}</div>
-                <Link to="/"></Link>
+                <Link to="/">Home</Link>
             </div>
         )
     }

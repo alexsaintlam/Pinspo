@@ -4,8 +4,12 @@ import NavContainer from './nav/nav_container';
 import SplashContainer from './splash/splash_container';
 import BoardIndexContainer from './board/board_index_container';
 import BoardShowContainer from './board/board_show_container';
+import CreateBoardFormContainer from './board/create_board_form_container';
+import EditBoardFormContainer from './board/edit_board_form_container';
 import PinIndexContainer from './pin/pin_index_container';
 import PinShowContainer from './pin/pin_show_container';
+import CreatePinFormContainer from './pin/create_pin_form_container';
+import EditPinFormContainer from './pin/edit_pin_form_container';
 import Modal from './modal/modal';
 
 const App = () => (
@@ -14,12 +18,15 @@ const App = () => (
         <header>
             <NavContainer />
             <SplashContainer />
+            <Route exact path="/" component={BoardIndexContainer} />
+            <Route exact path="/" component={PinIndexContainer} />
         </header>
         
-        <Route exact path="/" component={BoardIndexContainer} />
-        <Route exact path="/" component={PinIndexContainer} />
-        
-        <Switch>   
+        <Switch>
+            <Route path="/boards/new" component={CreateBoardFormContainer} />
+            <Route path="/boards/:boardId/edit" component={EditBoardFormContainer} />
+            <Route path="/pins/new" component={CreatePinFormContainer} />
+            <Route path="/pins/:pinId/edit" component={EditPinFormContainer} />
             <Route exact path="/boards/:boardId" component={BoardShowContainer} />
             <Route exact path="/pins/:pinId" component={PinShowContainer} />
         </Switch>

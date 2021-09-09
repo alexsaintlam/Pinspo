@@ -1,5 +1,9 @@
-@boards.each do |board|
-    json.set! board.id do 
-        json.extract! board, :id, :name, :description, :public, :user_id
+
+if @boards 
+    @boards.each do |board|
+        json.set! board.id do 
+            json.extract! board, :id, :name, :description, :public, :user_id
+        end
     end
 end
+

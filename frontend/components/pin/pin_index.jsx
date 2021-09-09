@@ -1,5 +1,6 @@
 import React from 'react';
 import PinIndexItem from './pin_index_item';
+import { Link } from 'react-router-dom';
 
 
 class PinIndex extends React.Component {
@@ -13,7 +14,7 @@ class PinIndex extends React.Component {
             <div>
                 <div>
                     {
-                        pins.map(pin => <PinIndexItem
+                        pins.map(pin => <PinIndexItem 
                                                     pin={pin}
                                                     deletePin={deletePin}
                                                     key={pin.id}
@@ -21,6 +22,7 @@ class PinIndex extends React.Component {
                                     )
                     }
                 </div>
+                <Link to="/pins/new">New Pin</Link>
             </div>
         )
     }

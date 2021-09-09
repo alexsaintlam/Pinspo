@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import NavDrop from './navDrop';
 import PinterestIcon from '@material-ui/icons/Pinterest';
 import SearchIcon from '@material-ui/icons/Search';
@@ -26,7 +27,7 @@ const Greeting = ({ currentUser, openModal }) => {
     const signedInNav = () => (
         <div className="navbar">
             <div className="nav-icon"><PinterestIcon /></div>
-            <a href="url">Home</a>
+            <Link to="/">Home</Link>
             <div className="searchbar">
                 <div className="icon"><SearchIcon /></div>
                 <div className="search-input">

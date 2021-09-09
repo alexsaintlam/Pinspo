@@ -14,7 +14,7 @@ class PinShow extends React.Component {
                 <div>{pin.title}</div>
                 <div>{pin.description}</div>
                 <div>{pin.user_id}</div>
-                <Link to="/"></Link>
+                <Link to="/">Home</Link>
             </div>
         )
     }

@@ -2,14 +2,15 @@ import { connect } from 'react-redux';
 import { createBoard } from '../../actions/board_actions';
 import BoardForm from './board_form';
 
-const mSTP = ({entities: { boards }}) => ({
+const mSTP = (state) => ({
     board: {
         name: "",
         description: "",
-        public: ""
+        public: "",
+        user_id: state.session.id
     },
-    formType: 'Create Board'
-})
+    formType: 'Create Board',
+});
 
 const mDTP = dispatch => ({
     submitBoard: board => dispatch(createBoard(board))
