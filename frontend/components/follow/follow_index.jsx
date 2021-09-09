@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class FollowIndex extends React.Component {
     componentDidMount() {
@@ -6,15 +7,23 @@ class FollowIndex extends React.Component {
     }
 
     render () {
-        const { follows, deleteFollow } = this.props;
+        const { follows, session, deleteFollow } = this.props;
+
+        const followList = (follow) => {
+            return (
+                <div key={follow.id}>
+                    <Link to={`/users/${follow.followed_id}`}>{follow.followed_id}</Link>
+                    <button onClick={() => deleteFollow(follow)}>Unfollow</button>
+                </div>
+            )
+        }
+
         return (
             <div>
                 {
-                    follows.map(follow => <div key={follow.id}>
-                                            {follow.followed_id}
-                                            <button onClick={() => deleteFollow(follow)}>Unfollow</button>
-                                        </div>       
-                                )
+                    follows.map(follow => 
+                        follow.follower_id === session ? followList(follow) : null
+                    )
                 }
             </div>
         )
@@ -22,3 +31,4 @@ class FollowIndex extends React.Component {
 }
 
 export default FollowIndex;
+

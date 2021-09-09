@@ -11,6 +11,7 @@ import PinShowContainer from './pin/pin_show_container';
 import CreatePinFormContainer from './pin/create_pin_form_container';
 import EditPinFormContainer from './pin/edit_pin_form_container';
 import FollowIndexContainer from './follow/follow_index_container';
+import UserShowContainer from './user/user_show_container';
 import Modal from './modal/modal';
 
 const App = () => (
@@ -31,6 +32,7 @@ const App = () => (
             <Route path="/pins/:pinId/edit" component={EditPinFormContainer} />
             <Route exact path="/boards/:boardId" component={BoardShowContainer} />
             <Route exact path="/pins/:pinId" component={PinShowContainer} />
+            <Route exact path="/users/:userId" component={UserShowContainer} />
         </Switch>
     </div>
 );

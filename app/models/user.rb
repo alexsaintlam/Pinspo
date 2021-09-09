@@ -7,7 +7,15 @@ class User < ApplicationRecord
 
     after_initialize :ensure_session_token
 
-    has_many :boards
+    has_many :pins,
+        class_name: :Pin,
+        foreign_key: :user_id,
+        primary_key: :id
+    
+    has_many :boards,
+        class_name: :Board,
+        foreign_key: :user_id,
+        primary_key: :id
 
     def self.generate_session_token
         SecureRandom.urlsafe_base64
