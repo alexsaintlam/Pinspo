@@ -11,8 +11,8 @@ const mSTP = (state, ownProps) => {
     })
 }
 
-const mDTP = dispatch => ({
-    submitUnfollow: follow => dispatch(deleteFollow(follow))
+const mDTP = (dispatch) => ({
+    deleteFollow: follow => dispatch(deleteFollow(follow))
 })
 
 export default connect(mSTP, mDTP)(UnfollowClick);

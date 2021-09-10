@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SignedInNav from '../nav/signed_in_nav_container';
 import FollowClick from '../follow/follow_click_container';
+import UnfollowClick from '../follow/unfollow_click_container';
 
 class UserShow extends React.Component {
     componentDidMount() {
@@ -13,6 +14,42 @@ class UserShow extends React.Component {
         if (!user) return null;
         const profileId = this.props.match.params.userId
         const sessionId = this.props.session
+        const followsObj = this.props.follows
+        let followingCount = 0;
+        let followerCount = 0;
+
+        const followStatus = () => {
+            for (let key in followsObj) {
+                if (followsObj[key].follower_id === sessionId &&
+                    followsObj[key].followed_id === parseInt(profileId)) {
+                        return (<UnfollowClick follow={followsObj[key]}/>)
+                }      
+            }
+            return (<FollowClick profileId={profileId} session={sessionId}/>)   
+        }
+
+        const followingCounter = () => {
+            for (let key in followsObj) {
+                if (followsObj[key].follower_id === sessionId) {
+                    followingCount += 1;
+                }
+            }
+
+            return followingCount;
+        }
+
+        const followerCounter = () => {
+            for (let key in followsObj) {
+                if (followsObj[key].followed_id === sessionId) {
+                    followerCount += 1;
+                }
+            }
+
+            return followerCount;
+        }
+
+        
+
         return(
             <div>
                 <div><SignedInNav /></div>
@@ -25,11 +62,11 @@ class UserShow extends React.Component {
                         <div className="user-name">{user.username}</div>
                         <div className="user-about">Sample about filler for profile page</div>
                         <div className="user-follow">
-                            <div className="user-followers">100 followers</div>
+                            <div className="user-followers">{`${followerCounter()} followers`}</div>
                             <div className="user-dot">·</div>
-                            <div className="user-following">200 following</div>
+                            <div className="user-following">{`${followingCounter()} following`}</div>
                         </div>
-                        <FollowClick />
+                        {followStatus()}
                     </div>            
                 </div>
 

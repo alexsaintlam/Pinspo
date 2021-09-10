@@ -3,7 +3,6 @@ import { createFollow } from '../../actions/follow_actions';
 import FollowClick from './follow_click';
 
 const mSTP = (state, ownProps) => {
-    debugger
     return ({
         follow: {
             follower_id: "",

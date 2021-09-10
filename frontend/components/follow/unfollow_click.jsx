@@ -9,12 +9,12 @@ class UnfollowClick extends React.Component {
     
     handleSubmit(e) {
         e.preventDefault();
-        this.props.submitUnfollow({ follower_id: this.props.session, followed_id: this.props.profileId});
+        this.props.deleteFollow(this.props.follow);
     }
 
     render() {
         return (
-            <button className="follow-button" onClick={this.handleSubmit}>Following</button>
+            <button className="un-follow-button" onClick={this.handleSubmit}>Following</button>
         )
     }
 }
