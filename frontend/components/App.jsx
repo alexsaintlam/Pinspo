@@ -17,12 +17,10 @@ import Modal from './modal/modal';
 const App = () => (
     <div>
         <Modal />
-        <NavContainer />
-        <SplashContainer />
+        <Route exact path="/" component={SplashContainer} />
         <Route exact path="/" component={BoardIndexContainer} />
         <Route exact path="/" component={PinIndexContainer} />
         <Route exact path="/" component={FollowIndexContainer} />
-       
         
         <Switch>
             <Route path="/boards/new" component={CreateBoardFormContainer} />

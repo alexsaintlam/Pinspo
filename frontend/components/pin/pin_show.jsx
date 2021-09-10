@@ -7,7 +7,10 @@ class PinShow extends React.Component {
     }
 
     render() {
+        
+
         const { pin } = this.props;
+        if (!pin) return null;
 
         return(
             <div>

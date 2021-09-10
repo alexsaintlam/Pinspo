@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SignedInNav from '../nav/signed_in_nav_container';
 
 class UserShow extends React.Component {
     componentDidMount() {
@@ -8,16 +9,19 @@ class UserShow extends React.Component {
 
     render() {
         const { user } = this.props;
-
+        if (!user) return null;
+        debugger
         return(
+            
             <div>
+                <div><SignedInNav /></div>
                 <div className="user-head">
                     <div className="user-headerpic">
                         <img className="user-banner" src={banner} />
                     </div>
                     <div className="user-under-banner">
                         <img className="user-avatar" src={picture1} />
-                        <div className="user-name">Boca do Lobo</div>
+                        <div className="user-name">{user.username}</div>
                         <div className="user-about">Sample about filler for profile page</div>
                         <div className="user-follow">
                             <div className="user-followers">100 followers</div>

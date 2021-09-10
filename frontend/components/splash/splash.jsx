@@ -4,6 +4,7 @@ import SplashPage2 from './splashPage2';
 import SplashPage3 from './splashPage3';
 import SplashPage4 from './splashPage4';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+import Greeting from '../nav/nav_container';
 
 class Splash extends React.Component {
     constructor(props) {
@@ -39,24 +40,27 @@ class Splash extends React.Component {
 
     render() {
         const signedOutSplash = () => (
-            <div className="splash-body">
-                <h1>Get your next</h1>
-                <div className="circle-button-cont">
-                    <div onClick={this.setButton1} className="circle-button1" tabIndex="1">
-                        <FiberManualRecordIcon fontSize="small" />
+            <div>
+                <div><Greeting /></div>
+                <div className="splash-body">
+                    <h1>Get your next</h1>
+                    <div className="circle-button-cont">
+                        <div onClick={this.setButton1} className="circle-button1" tabIndex="1">
+                            <FiberManualRecordIcon fontSize="small" />
+                        </div>
+                        <div onClick={this.setButton2} className="circle-button2" tabIndex="1">
+                            <FiberManualRecordIcon fontSize="small" />
+                        </div>
+                        <div onClick={this.setButton3} className="circle-button3" tabIndex="1">
+                            <FiberManualRecordIcon fontSize="small" />
+                        </div>
+                        <div onClick={this.setButton4} className="circle-button4" tabIndex="1">
+                            <FiberManualRecordIcon fontSize="small" />
+                        </div>
                     </div>
-                    <div onClick={this.setButton2} className="circle-button2" tabIndex="1">
-                        <FiberManualRecordIcon fontSize="small" />
-                    </div>
-                    <div onClick={this.setButton3} className="circle-button3" tabIndex="1">
-                        <FiberManualRecordIcon fontSize="small" />
-                    </div>
-                    <div onClick={this.setButton4} className="circle-button4" tabIndex="1">
-                        <FiberManualRecordIcon fontSize="small" />
-                    </div>
+                    {this.state.buttonPage}
+                    <div className="bottom-gradient"></div>
                 </div>
-                {this.state.buttonPage}
-                <div className="bottom-gradient"></div>
             </div>
         )
     
