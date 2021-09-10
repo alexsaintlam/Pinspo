@@ -30,9 +30,7 @@ const Greeting = ({ currentUser, openModal }) => {
             <Link to="/">Home</Link>
             <div className="searchbar">
                 <div className="icon"><SearchIcon /></div>
-                <div className="search-input">
-                    <input type="text" />
-                </div>
+                <input className="search-input" placeholder="Search" type="text" />
             </div>
             <div className="icon"><NotificationsIcon /></div>
             <div className="icon"><SmsIcon /></div>

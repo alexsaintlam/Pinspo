@@ -10,11 +10,13 @@ class PinIndex extends React.Component {
 
     render () {
         const { pins, deletePin } = this.props;
+        let pinsArr = Object.values(pins);
+
         return (
             <div>
                 <div>
                     {
-                        pins.map(pin => <PinIndexItem 
+                        pinsArr.map(pin => <PinIndexItem 
                                                     pin={pin}
                                                     deletePin={deletePin}
                                                     key={pin.id}

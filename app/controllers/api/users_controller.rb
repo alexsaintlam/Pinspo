@@ -1,7 +1,4 @@
 class Api::UsersController < ApplicationController
-    def index
-        @user = User.all
-    end
     
     def show
         @user = User.find_by(id: params[:id])
@@ -13,7 +10,7 @@ class Api::UsersController < ApplicationController
 
         if @user.save
             login(@user)
-            render "api/users/show"
+            render :show
         else
             render json: @user.errors.full_messages, status: 422
         end

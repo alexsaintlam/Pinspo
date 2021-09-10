@@ -8,6 +8,7 @@ class FollowIndex extends React.Component {
 
     render () {
         const { follows, session, deleteFollow } = this.props;
+        let followsArr = Object.values(follows);
 
         const followList = (follow) => {
             return (
@@ -21,7 +22,7 @@ class FollowIndex extends React.Component {
         return (
             <div>
                 {
-                    follows.map(follow => 
+                    followsArr.map(follow => 
                         follow.follower_id === session ? followList(follow) : null
                     )
                 }
