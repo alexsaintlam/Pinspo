@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SignedInNav from '../nav/signed_in_nav_container';
+import FollowClick from '../follow/follow_click_container';
 
 class UserShow extends React.Component {
     componentDidMount() {
@@ -10,9 +11,9 @@ class UserShow extends React.Component {
     render() {
         const { user } = this.props;
         if (!user) return null;
-        debugger
+        const profileId = this.props.match.params.userId
+        const sessionId = this.props.session
         return(
-            
             <div>
                 <div><SignedInNav /></div>
                 <div className="user-head">
@@ -28,7 +29,7 @@ class UserShow extends React.Component {
                             <div className="user-dot">·</div>
                             <div className="user-following">200 following</div>
                         </div>
-                        <button className="follow-button">Follow</button>
+                        <FollowClick />
                     </div>            
                 </div>
 
