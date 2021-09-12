@@ -852,6 +852,16 @@
     text-decoration: none;
 }
 
+.pin-background {
+    position: fixed;
+    top: 5rem;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    cursor: zoom-out;
+}
+
 .pin-container {
     display: flex;
     justify-content: center;
@@ -897,9 +907,21 @@
 }
 
 .pin-dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pin-save-board {
     font-size: 16px;
     font-weight: 700;
-    padding-right: 16px;
+    padding-right: 4px;
+}
+
+.pin-dropdown-icon {
+    color:rgb(51, 51, 51);
+    padding-top: 6px;
+    padding-right: 12px;
 }
 
 .pin-save {
@@ -987,6 +1009,10 @@
     color: #111;
 }
 
+.pin-photos:focus {
+    color: #111;
+}
+
 .pin-comments {
     font-size: 16px;
     font-weight: 700;
@@ -995,6 +1021,10 @@
 }
 
 .pin-comments:hover {
+    color: #111;
+}
+
+.pin-comments:focus {
     color: #111;
 }
 
@@ -1051,3 +1081,4 @@
     font-weight: 700;
     padding: 0px 16px;
 }
+

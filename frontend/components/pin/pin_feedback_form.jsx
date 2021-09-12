@@ -56,8 +56,8 @@ class PinFeedbackForm extends React.Component {
             <div>
                 <div className="pin-feedback">
                     <div className='pin-feedback-body'>
-                        <div className="pin-photos" onClick={this.showPhoto}>Photos</div>
-                        <div className="pin-comments" onClick={this.showComment}>Comments</div>
+                        <div className="pin-photos" onClick={this.showPhoto} tabIndex="1">Photos</div>
+                        <div className="pin-comments" onClick={this.showComment} tabIndex="1">Comments</div>
                     </div>
                 </div>
                 {this.state.showMenu ? showCommentsForm() : showPhotoForm() }
