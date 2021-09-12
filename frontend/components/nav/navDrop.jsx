@@ -10,6 +10,7 @@ class NavDrop extends React.Component {
 
         this.showMenu = this.showMenu.bind(this);
         this.closeMenu = this.closeMenu.bind(this);
+        this.handleLogOut = this.handleLogOut.bind(this);
     }
 
     showMenu(e) {
@@ -22,15 +23,23 @@ class NavDrop extends React.Component {
         this.setState({ showMenu: false })
     }
 
+    handleLogOut(e) {
+        e.preventDefault();
+        this.props.logout();
+        window.location.replace("#/")
+    }
+
     render() {
         const dropMenu = () => {
             return(
-                <div className="nav-drop">
-                    <div className="nav-dropContent">Settings</div>
-                    <div className="nav-dropContent">Tune your home feed</div>
-                    <div className="nav-dropContent">Get help</div>
-                    <div className="nav-dropContent">See terms and privacy</div>
-                    <div className="last-nav-dropContent" onClick={this.props.logout}>Log out</div>
+                <div className="nav-drop-background" onClick={this.closeMenu}>
+                    <div className="nav-drop">
+                        <div className="nav-dropContent">Settings</div>
+                        <div className="nav-dropContent">Tune your home feed</div>
+                        <div className="nav-dropContent">Get help</div>
+                        <div className="nav-dropContent">See terms and privacy</div>
+                        <div className="last-nav-dropContent" onClick={this.props.logout}>Log out</div>
+                    </div>
                 </div>
             )
         }

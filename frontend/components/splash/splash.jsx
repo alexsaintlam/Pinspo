@@ -4,7 +4,6 @@ import SplashPage2 from './splashPage2';
 import SplashPage3 from './splashPage3';
 import SplashPage4 from './splashPage4';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
-import Greeting from '../nav/nav_container';
 
 class Splash extends React.Component {
     constructor(props) {
@@ -41,7 +40,6 @@ class Splash extends React.Component {
     render() {
         const signedOutSplash = () => (
             <div>
-                <div><Greeting /></div>
                 <div className="splash-body">
                     <h1>Get your next</h1>
                     <div className="circle-button-cont">

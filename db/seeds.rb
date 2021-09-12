@@ -22,7 +22,7 @@ User.destroy_all
     board1 = Board.create!(name: "boardName1", description: "boardDesc1", public: true, user_id: user5.id)
     board2 = Board.create!(name: "boardName2", description: "boardDesc2", public: true, user_id: user5.id)
 
-    pin1 = Pin.create!(title: "pinTitle1", description: "pinDesc1", organized: true, user_id: user5.id)
+    pin1 = Pin.create!(title: "pinTitle1", description: "pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1", organized: true, user_id: user5.id)
     pin2 = Pin.create!(title: "pinTitle2", description: "pinDesc2", organized: true, user_id: user5.id)
     pin3 = Pin.create!(title: "pinTitle3", description: "pinDesc3", organized: true, user_id: user5.id)
 

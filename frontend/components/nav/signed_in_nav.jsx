@@ -17,6 +17,7 @@ const SignedInNav = () => {
             </div>
             <div className="icon"><NotificationsIcon /></div>
             <div className="icon"><SmsIcon /></div>
+            <img className="nav-avatar" src={picture1} />
             <NavDrop />
         </div>
     )

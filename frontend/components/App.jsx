@@ -10,17 +10,16 @@ import PinIndexContainer from './pin/pin_index_container';
 import PinShowContainer from './pin/pin_show_container';
 import CreatePinFormContainer from './pin/create_pin_form_container';
 import EditPinFormContainer from './pin/edit_pin_form_container';
-import FollowIndexContainer from './follow/follow_index_container';
 import UserShowContainer from './user/user_show_container';
 import Modal from './modal/modal';
 
 const App = () => (
     <div>
         <Modal />
+        <NavContainer />
         <Route exact path="/" component={SplashContainer} />
         <Route exact path="/" component={BoardIndexContainer} />
         <Route exact path="/" component={PinIndexContainer} />
-        <Route exact path="/" component={FollowIndexContainer} />
         
         <Switch>
             <Route path="/boards/new" component={CreateBoardFormContainer} />

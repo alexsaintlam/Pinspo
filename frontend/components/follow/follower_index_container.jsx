@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { fetchFollows, deleteFollow, createFollow } from '../../actions/follow_actions';
 import { closeFollowModal } from '../../actions/follow_modal_actions';
-import FollowIndex from './follow_index';
+import FollowerIndex from './follower_index';
 
 const mSTP = (state) => ({
     follows: Object.values(state.entities.follows),
@@ -14,4 +14,4 @@ const mDTP = dispatch => ({
     closeFollowModal: () => dispatch(closeFollowModal())
 })
 
-export default connect(mSTP, mDTP)(FollowIndex);
+export default connect(mSTP, mDTP)(FollowerIndex);

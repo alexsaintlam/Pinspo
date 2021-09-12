@@ -1,18 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SignedInNav from '../nav/signed_in_nav_container';
 import FollowClick from '../follow/follow_click_container';
 import UnfollowClick from '../follow/unfollow_click_container';
+import FollowModal from '../modal/follow_modal';
+import NonSessionShow from './non_session_show';
+import SessionShow from './session_show';
 
 class UserShow extends React.Component {
     componentDidMount() {
         this.props.fetchUser(this.props.match.params.userId)
+        this.props.fetchUsers()
     }
 
     render() {
         const { user } = this.props;
         if (!user) return null;
-        const profileId = this.props.match.params.userId
+        const profileId = parseInt(this.props.match.params.userId)
         const sessionId = this.props.session
         const followsObj = this.props.follows
         let followingCount = 0;
@@ -21,7 +24,7 @@ class UserShow extends React.Component {
         const followStatus = () => {
             for (let key in followsObj) {
                 if (followsObj[key].follower_id === sessionId &&
-                    followsObj[key].followed_id === parseInt(profileId)) {
+                    followsObj[key].followed_id === profileId) {
                         return (<UnfollowClick follow={followsObj[key]}/>)
                 }      
             }
@@ -30,7 +33,7 @@ class UserShow extends React.Component {
 
         const followingCounter = () => {
             for (let key in followsObj) {
-                if (followsObj[key].follower_id === sessionId) {
+                if (followsObj[key].follower_id === profileId) {
                     followingCount += 1;
                 }
             }
@@ -40,7 +43,7 @@ class UserShow extends React.Component {
 
         const followerCounter = () => {
             for (let key in followsObj) {
-                if (followsObj[key].followed_id === sessionId) {
+                if (followsObj[key].followed_id === profileId) {
                     followerCount += 1;
                 }
             }
@@ -48,11 +51,10 @@ class UserShow extends React.Component {
             return followerCount;
         }
 
-        
-
         return(
             <div>
-                <div><SignedInNav /></div>
+                <FollowModal profileId={profileId} session={sessionId}/>
+                
                 <div className="user-head">
                     <div className="user-headerpic">
                         <img className="user-banner" src={banner} />
@@ -62,70 +64,16 @@ class UserShow extends React.Component {
                         <div className="user-name">{user.username}</div>
                         <div className="user-about">Sample about filler for profile page</div>
                         <div className="user-follow">
-                            <div className="user-followers">{`${followerCounter()} followers`}</div>
+                            <div onClick={() => this.props.openFollowModal('following')}
+                                className="user-follow-text">{`${followerCounter()} followers`}</div>
                             <div className="user-dot">·</div>
-                            <div className="user-following">{`${followingCounter()} following`}</div>
+                            <div onClick={() => this.props.openFollowModal('followers')} 
+                                className="user-follow-text">{`${followingCounter()} following`}</div>
                         </div>
                         {followStatus()}
                     </div>            
                 </div>
-
-                <div className="user-body">
-                    <div className="user-body-head">
-                        <button className="user-created-button">Created</button>
-                        <button className="user-saved-button">Saved</button>
-                    </div>
-                    <div className="user-body-gallery">
-                        <div className="picture-container">
-                            <img src={picture1} />
-                            <button className="gallery-save">Save</button>
-                        </div>
-                        <div className="picture-container">
-                            <img src={picture2} />
-                            <button className="gallery-save">Save</button>
-                        </div>
-                        <div className="picture-container">
-                            <img src={picture3} />
-                            <button className="gallery-save">Save</button>
-                        </div>
-                        <div className="picture-container">
-                            <img src={picture4} />
-                            <button className="gallery-save">Save</button>
-                        </div>
-                        <div className="picture-container">
-                            <img src={picture1} />
-                            <button className="gallery-save">Save</button>
-                        </div>
-                        <div className="picture-container">
-                            <img src={picture2} />
-                            <button className="gallery-save">Save</button>
-                        </div>
-                        <div className="picture-container">
-                            <img src={picture3} />
-                            <button className="gallery-save">Save</button>
-                        </div>
-                        <div className="picture-container">
-                            <img src={picture1} />
-                            <button className="gallery-save">Save</button>
-                        </div>
-                        <div className="picture-container">
-                            <img src={picture1} />
-                            <button className="gallery-save">Save</button>
-                        </div>
-                        <div className="picture-container">
-                            <img src={picture1} />
-                            <button className="gallery-save">Save</button>
-                        </div>
-                        <div className="picture-container">
-                            <img src={picture1} />
-                            <button className="gallery-save">Save</button>
-                        </div>
-                        <div className="picture-container">
-                            <img src={picture1} />
-                            <button className="gallery-save">Save</button>
-                        </div>
-                    </div>
-                </div>
+                {profileId === sessionId ? <SessionShow /> : <NonSessionShow />}
             </div>
         )
     }

@@ -34,6 +34,7 @@ const Greeting = ({ currentUser, openModal }) => {
             </div>
             <div className="icon"><NotificationsIcon /></div>
             <div className="icon"><SmsIcon /></div>
+            <Link to={`/users/${currentUser.id}`}><div><img className="nav-avatar" src={picture1} /></div></Link>
             <NavDrop />
         </div>
     )

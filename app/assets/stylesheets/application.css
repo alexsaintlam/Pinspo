@@ -278,6 +278,16 @@
     outline: none;
 }
 
+.nav-avatar {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    box-shadow: white 0px 0px 0px 1px;
+    margin-left: 15px;
+    object-fit: cover;
+}
+
 .drop-icon {
     display: flex;
     position: relative;
@@ -291,9 +301,20 @@
     background-color: #efefef;
 }
 
+.nav-drop-background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: transparent;
+    z-index: 10;
+}
+
 .nav-drop {
     position: absolute;
     left: 85.5%;
+    top: 4.5rem;
     background-color: white;
     border-radius: 8px;
     width: 272px;
@@ -595,7 +616,6 @@
 .user-about {
     font-size: 16px;
     padding: 4px 0px 4px 0px;
-    
 }
 
 .user-dot {
@@ -612,6 +632,11 @@
     margin-top: 4px;
     font-weight: 700;
 }
+
+.user-follow-text {
+    cursor: pointer;
+}
+
 
 .follow-button {
     border: 0;
@@ -746,4 +771,283 @@
 
 .gallery-save:hover + .picture-container img {
     filter: grayscale(70%);
+}
+
+.follow-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 552px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 8px;
+}
+
+.follow-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 552px;
+    font-size: 28px;
+    font-weight: 700;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.follow-list {
+    width: 552px;
+}
+
+.follow-item {
+    width: 495px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 24px;
+}
+
+.follow-unfollow {
+    border: 0;
+    min-height: 40px;
+    min-width: 60px;
+    border-radius: 24px;
+    cursor: pointer;
+    background-color: #efefef;
+    font-size: 16px;
+    color: #111;
+    font-weight: 700;
+    padding: 8px 12px;
+}
+
+.follow-follow {
+    border: 0;
+    min-height: 40px;
+    min-width: 60px;
+    border-radius: 24px;
+    cursor: pointer;
+    background-color: #e60023;
+    font-size: 16px;
+    color: white;
+    font-weight: 700;
+    padding: 8px 12px;
+}
+
+.follow-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 8px;
+    box-shadow: white 0px 0px 0px 1px;
+    object-fit: cover;
+}
+
+.follow-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(51, 51, 51);
+    text-decoration: none;
+}
+
+.pin-container {
+    display: flex;
+    justify-content: center;
+}
+
+.pin-body {
+    display: flex;
+    max-width: 1016px;
+    cursor: pointer;
+    margin-top: 16px;
+    border-radius: 32px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 1px 20px 0px;
+}
+
+.pin-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 508px;
+}
+
+.pin-picture img {
+    box-sizing: border-box;
+    width: 468px;
+    border-radius: 16px;
+    margin: 20px;
+    object-fit: cover;
+}
+
+.pin-side {
+    display: flex;
+    flex-direction: column;
+    width: 444px;
+    padding-right: 32px;
+    padding-left: 32px;
+}
+
+.pin-header {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-top: 32px;
+}
+
+.pin-dropdown {
+    font-size: 16px;
+    font-weight: 700;
+    padding-right: 16px;
+}
+
+.pin-save {
+    border: 0;
+    min-height: 48px;
+    min-width: 60px;
+    border-radius: 24px;
+    cursor: pointer;
+    background-color: #e60023;
+    font-size: 16px;
+    color: white;
+    font-weight: 700;
+    padding: 12px 16px 12px 16px;
+}
+
+.pin-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    margin-top: 16px;
+}
+
+.pin-description {
+    font-size: 14px;
+    color: #333;
+    margin-top: 8px;
+}
+
+.author-container {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.pin-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    padding-right: 4px;
+    box-shadow: white 0px 0px 0px 1px;
+    object-fit: cover;
+}
+
+.pin-username {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0px 4px;
+}
+
+.pin-followers {
+    font-size: 14px;
+    padding: 0px 4px;
+}
+
+.pin-unfollow {
+    border: 0;
+    min-height: 48px;
+    min-width: 60px;
+    border-radius: 24px;
+    cursor: pointer;
+    background-color: black;
+    font-size: 16px;
+    color: white;
+    font-weight: 700;
+    padding: 12px 16px 12px 16px;
+}
+
+.pin-feedback {
+    display: flex;
+    margin-top: 40px;
+}
+
+.pin-feedback-body {
+    display: flex;
+    height: 52px;
+}
+
+.pin-photos {
+    font-size: 16px;
+    font-weight: 700;
+    color: #767676;
+}
+
+.pin-photos:hover {
+    color: #111;
+}
+
+.pin-comments {
+    font-size: 16px;
+    font-weight: 700;
+    color: #767676;
+    margin-left: 16px;
+}
+
+.pin-comments:hover {
+    color: #111;
+}
+
+.pin-comment-form {
+    padding: 16px 0px 16px 0px;
+}
+
+.pin-comment-phrase {
+    font-size: 12px;
+    color: #111
+}
+
+.pin-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.pin-comment-input {
+    height: 48px;
+    width: 100%;
+    margin-left: 12px;
+    border-radius: 26px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ddd;
+    outline: none;
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+.pin-photo-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0px 16px 0px;
+}
+
+.pin-photo-phrase {
+    font-size: 14px;
+    color: #111;
+}
+
+.pin-photo-button {
+    border: 0;
+    min-height: 48px;
+    min-width: 60px;
+    border-radius: 24px;
+    cursor: pointer;
+    background-color: #efefef;
+    font-size: 16px;
+    color: #111;
+    font-weight: 700;
+    padding: 0px 16px;
 }

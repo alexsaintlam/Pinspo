@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { fetchUser, fetchUsers } from '../../actions/user_actions';
 import { openFollowModal } from '../../actions/follow_modal_actions';
-import UserShow from './user_show';
+import SessionShow from './user_show';
 
 const mSTP = (state, ownProps) => ({
     user: state.entities.users[ownProps.match.params.userId],
@@ -15,4 +15,4 @@ const mDTP = dispatch => ({
     openFollowModal: followModal => dispatch(openFollowModal(followModal))
 })
 
-export default connect(mSTP, mDTP)(UserShow)
+export default connect(mSTP, mDTP)(SessionShow)

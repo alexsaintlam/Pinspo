@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CloseRoundedIcon from '@material-ui/icons/CloseRounded';
 
-class FollowIndex extends React.Component {
+class FollowerIndex extends React.Component {
     componentDidMount() {
         this.props.fetchFollows();
     }
@@ -16,23 +16,20 @@ class FollowIndex extends React.Component {
             const followStatus = () => {
                 for (let i = 0; i < followsArr.length; i++) {
                     let followObj = followsArr[i];
-                    if (followObj.follower_id === session && followObj.followed_id === follow.followed_id) {
+                    if (followObj.follower_id === session && followObj.followed_id === follow.follower_id) {
                         return (
-                            <div>
                             <button className="follow-unfollow" onClick={() => deleteFollow(followObj)}>Unfollow</button>
-                            </div>
-                            
                         )
-                    }     
+                    }
                 }
-
-                return (<button className="follow-follow" onClick={() => submitFollow({ follower_id: session, followed_id: follow.followed_id})}>Follow</button>)
+    
+                return (<button className="follow-follow" onClick={() => submitFollow({ follower_id: session, followed_id: follow.follower_id})}>Follow</button>)
             }
 
             return (
                 <div className="follow-item" key={follow.id}>  
                     <img className="follow-avatar" src={picture1} />
-                    <Link className="follow-name" to={`/users/${follow.followed_id}`} onClick={this.props.closeFollowModal}>{follow.followed_id}</Link>
+                    <Link className="follow-name" to={`/users/${follow.follower_id}`} onClick={this.props.closeFollowModal}>{follow.follower_id}</Link>
                     <div className="nav-fil"></div>
                     {followStatus()}
                 </div>
@@ -41,13 +38,13 @@ class FollowIndex extends React.Component {
 
         return (
             <div className="follow-modal">
-                <div className="follow-title">Following</div>
+                <div className="follow-title">Followers</div>
                 <div onClick={this.props.closeFollowModal} className="close-x"><CloseRoundedIcon /></div>
                 <div className="follow-list">
                     <div>
                         {
                             followsArr.map(follow => 
-                                follow.follower_id === profileId ? followList(follow) : null
+                                follow.followed_id === profileId ? followList(follow) : null
                             )
                         }
                     </div>
@@ -57,4 +54,4 @@ class FollowIndex extends React.Component {
     }
 }
 
-export default FollowIndex;
+export default FollowerIndex;
