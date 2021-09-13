@@ -1,6 +1,7 @@
 import React from 'react';
 import FollowClick from '../follow/follow_click_container';
 import UnfollowClick from '../follow/unfollow_click_container';
+import NonSessionSwitch from './non_session_switch';
 
 class NonSessionShow extends React.Component {
     constructor(props) {
@@ -24,62 +25,7 @@ class NonSessionShow extends React.Component {
         return (
             <div className="user-container">
                 <div className="non-session-button">{followStatus()}</div>
-                <div className="user-body">
-                    <div className="user-body-head">
-                        <button className="user-created-button">Created</button>
-                        <button className="user-saved-button">Saved</button>
-                    </div>
-                    <div className="user-body-gallery">
-                        <div className="picture-container">
-                            <img src={picture1} />
-                            <button className="gallery-save">Save</button>
-                        </div>
-                        <div className="picture-container">
-                            <img src={picture2} />
-                            <button className="gallery-save">Save</button>
-                        </div>
-                        <div className="picture-container">
-                            <img src={picture3} />
-                            <button className="gallery-save">Save</button>
-                        </div>
-                        <div className="picture-container">
-                            <img src={picture4} />
-                            <button className="gallery-save">Save</button>
-                        </div>
-                        <div className="picture-container">
-                            <img src={picture1} />
-                            <button className="gallery-save">Save</button>
-                        </div>
-                        <div className="picture-container">
-                            <img src={picture2} />
-                            <button className="gallery-save">Save</button>
-                        </div>
-                        <div className="picture-container">
-                            <img src={picture3} />
-                            <button className="gallery-save">Save</button>
-                        </div>
-                        <div className="picture-container">
-                            <img src={picture1} />
-                            <button className="gallery-save">Save</button>
-                        </div>
-                        <div className="picture-container">
-                            <img src={picture1} />
-                            <button className="gallery-save">Save</button>
-                        </div>
-                        <div className="picture-container">
-                            <img src={picture1} />
-                            <button className="gallery-save">Save</button>
-                        </div>
-                        <div className="picture-container">
-                            <img src={picture1} />
-                            <button className="gallery-save">Save</button>
-                        </div>
-                        <div className="picture-container">
-                            <img src={picture1} />
-                            <button className="gallery-save">Save</button>
-                        </div>
-                    </div>
-                </div>
+                <NonSessionSwitch />
             </div>
         
             

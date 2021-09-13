@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PinIndex from '../pin/pin_index_container';
 
 class BoardShow extends React.Component {
     componentDidMount() {
@@ -7,14 +8,22 @@ class BoardShow extends React.Component {
     }
 
     render() {
-        const { board } = this.props;
+        const { board, pins } = this.props;
+        if (!board) return null;
 
         return(
-            <div>
-                <div>{board.name}</div>
-                <div>{board.description}</div>
-                <div>{board.user_id}</div>
-                <Link to="/">Home</Link>
+            <div className="show-board">
+                <div className="show-board-head">
+                    <div className="show-board-title">{board.name}</div>
+                    <div className="show-board-avatar"><img src={picture1} /></div>
+                    <div className="show-board-info">
+                        <div className="show-board-user">Hard Coded</div>
+                        <div className="show-dot">·</div>
+                        <div className="show-board-desc">{board.description}</div>
+                    </div>
+                    <div className="show-board-follows">229 Hardcoded</div>
+                    <PinIndex />
+                </div>
             </div>
         )
     }

@@ -14,17 +14,19 @@ class PinIndex extends React.Component {
 
         return (
             <div>
-                <div>
-                    {
-                        pinsArr.map(pin => <PinIndexItem 
-                                                    pin={pin}
-                                                    deletePin={deletePin}
-                                                    key={pin.id}
-                                            />
-                                    )
-                    }
+                <div className="unorganized-gallery">
+                    <div className="unorganized-image">
+                        {
+                            pinsArr.map(pin => <PinIndexItem 
+                                                        pin={pin}
+                                                        deletePin={deletePin}
+                                                        key={pin.id}
+                                                />
+                                        )
+                        }
+                    </div>
                 </div>
-                <Link to="/pins/new">New Pin</Link>
+
             </div>
         )
     }

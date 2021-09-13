@@ -695,6 +695,10 @@
     align-items: center;
 }
 
+.user-body-head {
+    margin-bottom: 16px;
+}
+
 .user-created-button {
     padding: 8px 8px 8px 8px;
     margin-left: 8px;
@@ -777,7 +781,7 @@
     margin-top: 8px;
 }
 
-.user-body-gallery img:hover + .gallery-save {
+.pin-link:hover + .gallery-save {
     display: inline-block;
 }
 
@@ -1103,7 +1107,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 15rem 16px 16px 16px;
+    padding: 11rem 16px 16px 16px;
 }
 
 .session-add {
@@ -1219,24 +1223,155 @@
 }
 
 .unorganized-gallery {
-    display: inline-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+    width: 100%;
 }
 
 .unorganized-image {
     align-items: center;
     box-sizing: border-box;
-    column-count: 6;
+    justify-content: center;
+    align-items: center;
+    column-count: 7;
     height: 100%;
     max-width: 100%;
 }
 
 .unorganized-image img {
     display: flex;
-    width: 275px;
+    width: 236px;
     cursor: zoom-in;
     border-radius: 16px;
+    margin-bottom: 16px;
     object-fit: cover;
 }
 
+.show-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.show-board-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.show-board-title {
+    font-size: 36px;
+    color: #111111;
+    font-weight: 700;
+    margin-top: 16px;
+}
+
+.show-board-avatar img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    box-shadow: white 0px 0px 0px 1px;
+    margin-top: 12px;
+    object-fit: cover;
+}
+
+.show-board-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.show-board-user {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111;
+}
+
+.show-dot {
+    padding: 0px 4px; 
+}
+
+.show-board-desc {
+    font-size: 16px;
+    color: #111;
+}
+
+.show-board-follows {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111;
+    margin-top: 8px;
+    margin-bottom: 32px;
+}
+
+.add-drop-background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: transparent;
+    z-index: 10;
+}
+
+.add-drop {
+    position: absolute;
+    left: 90.5%;
+    top: 41rem;
+    background-color: white;
+    border-radius: 8px;
+    margin-top: 8px;
+    width: 164px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.add-drop-body {
+    padding: 8px;
+}
+
+.add-drop-title {
+    margin-top: 8px;
+    padding: 0px 8px;
+    font-size: 12px;
+    color: #111111
+}
+
+.add-drop-links {
+    margin-top: 8px;
+}
+
+.add-dropContent {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 8px;
+    min-height: 35px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.last-add-dropContent {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 8px;
+    min-height: 35px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.add-dropContent:hover {
+    background-color: #efefef;
+}
+
+.last-add-dropContent:hover {
+    background-color: #efefef;
+}
 
