@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { fetchUser, fetchUsers } from '../../actions/user_actions';
 import { openFollowModal } from '../../actions/follow_modal_actions';
-import SessionShow from './session_show';
+import NonSessionShow from './non_session_show';
 
 const mDTP = dispatch => ({
     fetchUser: userId => dispatch(fetchUser(userId)),
@@ -9,4 +9,4 @@ const mDTP = dispatch => ({
     openFollowModal: followModal => dispatch(openFollowModal(followModal))
 })
 
-export default connect(null, mDTP)(SessionShow)
+export default connect(null, mDTP)(NonSessionShow)

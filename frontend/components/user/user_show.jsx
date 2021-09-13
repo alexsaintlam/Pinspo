@@ -1,10 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import FollowClick from '../follow/follow_click_container';
-import UnfollowClick from '../follow/unfollow_click_container';
 import FollowModal from '../modal/follow_modal';
-import NonSessionShow from './non_session_show';
-import SessionShow from './session_show';
+import NonSessionShow from './non_session_show_container';
+import SessionShow from './session_show_container';
 
 class UserShow extends React.Component {
     componentDidMount() {
@@ -20,16 +18,6 @@ class UserShow extends React.Component {
         const followsObj = this.props.follows
         let followingCount = 0;
         let followerCount = 0;
-
-        const followStatus = () => {
-            for (let key in followsObj) {
-                if (followsObj[key].follower_id === sessionId &&
-                    followsObj[key].followed_id === profileId) {
-                        return (<UnfollowClick follow={followsObj[key]}/>)
-                }      
-            }
-            return (<FollowClick profileId={profileId} session={sessionId}/>)   
-        }
 
         const followingCounter = () => {
             for (let key in followsObj) {
@@ -54,7 +42,6 @@ class UserShow extends React.Component {
         return(
             <div>
                 <FollowModal profileId={profileId} session={sessionId}/>
-                
                 <div className="user-head">
                     <div className="user-headerpic">
                         <img className="user-banner" src={banner} />
@@ -70,10 +57,11 @@ class UserShow extends React.Component {
                             <div onClick={() => this.props.openFollowModal('followers')} 
                                 className="user-follow-text">{`${followingCounter()} following`}</div>
                         </div>
-                        {followStatus()}
+                        
                     </div>            
                 </div>
-                {profileId === sessionId ? <SessionShow /> : <NonSessionShow />}
+                {profileId === sessionId ? <SessionShow user={user} profileId={profileId} sessionId={sessionId} followsObj={followsObj}/> : 
+                <NonSessionShow user={user} profileId={profileId} sessionId={sessionId} followsObj={followsObj} />}
             </div>
         )
     }
