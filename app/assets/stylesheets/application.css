@@ -1375,3 +1375,121 @@
     background-color: #efefef;
 }
 
+.board-create {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 32px;
+}
+
+.board-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 540px;
+    height: 100px;
+}
+
+.board-create-title {
+    font-size: 28px;
+    padding: 32px 0px;
+    font-weight: 700;
+}
+
+.board-body-inputs {
+    display: flex;
+    flex-direction: column;
+    height: 154px;
+    padding: 0px 32px;
+}
+
+.board-label-name {
+    font-size: 12px;
+    color: #111111;
+    margin-bottom: 8px;
+}
+
+.board-input-name {
+    font-size: 16px;
+    height: 28px;
+    width: 440px;
+    padding: 8px 16px;
+    border-radius: 16px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #ddd;
+    outline: none;
+    background-color: transparent;
+}
+
+.board-input-name:focus {
+    box-shadow: 0 0 0 4px rgb(0 132 255 / 50%);
+    outline: 0;
+}
+
+.board-public-container {
+    display: flex;
+    flex-direction: row;
+    padding: 4px 0px;
+}
+
+.board-public-check {
+    height: 20px;
+    width: 20px;
+    border-width: 2px;
+    border-color: #d0d0d0;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.board-label-container {
+    margin-left: 8px;
+}
+
+.board-label-desc {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111;
+}
+
+.board-label-lower-desc-contain {
+    display: flex;
+    flex-direction: row;
+}
+
+.board-lower-desc1 {
+    font-size: 16px;
+    color: #767676;
+}
+
+.board-lower-desc2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #767676;
+    margin-left: 6px;
+}
+
+.create-button-contnainer {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 112px;
+    width: 540px;
+    padding: 32px;
+}
+
+.board-create-button {
+    border: 0;
+    min-height: 48px;
+    border-radius: 24px;
+    cursor: pointer;
+    background-color: #efefef;
+    font-size: 16px;
+    color: #767676;
+    font-weight: 700;
+    padding: 12px 16px 12px 16px;
+    margin-top: 8px;
+}
+

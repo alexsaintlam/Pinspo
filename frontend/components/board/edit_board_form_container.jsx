@@ -13,10 +13,18 @@ class EditBoardForm extends React.Component {
 
         if (!board) return null;
         return (
-            <BoardForm
-                board={board}
-                formType={formType}
-                submitBoard={submitBoard} />
+            <div>
+                <div className="edit-header">Edit your board</div>
+                <div className="edit-name-container">
+                    <div className="edit-name">Name</div>
+                    <input className="edit-name-input"></input>
+                </div>
+                <div className="edit-description-container">
+                <div className="edit-description">Description</div>
+                <input className="edit-description-input"></input>
+                </div>
+
+            </div>
         );
     }
 }

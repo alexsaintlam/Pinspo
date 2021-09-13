@@ -79,37 +79,39 @@ class SessionForm extends React.Component {
         this.props.formType === 'signup' ? typePassword = 'Create a password' : typePassword = 'Password';
 
         return (
-            <div className="login-form-container">
-                <form onSubmit={this.handleSubmit} className='login-form-box'>
-                    <div className="modal-icon"><PinterestIcon style={{ fontSize: 37 }}/></div>
-                    <div className="modal-head">Welcome to Pinterest</div>
-                    {this.props.formType === 'signup' ? 
-                        <div>Find new ideas to try</div> : null}
-                    <div onClick={this.props.closeModal} className="close-x"><CloseRoundedIcon /></div>
-                    {this.renderErrors()}
-                    <div className='login-form'>
-                        <div className="modal-input">
-                            <input type='text'
-                                placeholder="Username"
-                                value={this.state.username}
-                                onChange={this.update('username')}
-                                className='login-input'
-                            />
+            <div className="modal-child" onClick={e => e.stopPropagation()}>
+                <div className="login-form-container">
+                    <form onSubmit={this.handleSubmit} className='login-form-box'>
+                        <div className="modal-icon"><PinterestIcon style={{ fontSize: 37 }}/></div>
+                        <div className="modal-head">Welcome to Pinterest</div>
+                        {this.props.formType === 'signup' ? 
+                            <div>Find new ideas to try</div> : null}
+                        <div onClick={this.props.closeModal} className="close-x"><CloseRoundedIcon /></div>
+                        {this.renderErrors()}
+                        <div className='login-form'>
+                            <div className="modal-input">
+                                <input type='text'
+                                    placeholder="Username"
+                                    value={this.state.username}
+                                    onChange={this.update('username')}
+                                    className='login-input'
+                                />
+                            </div>
+                            <div className="modal-input">
+                                <input type='password'
+                                    placeholder={typePassword}
+                                    value={this.state.password}
+                                    onChange={this.update('password')}
+                                    className='login-input'
+                                />
+                            </div>
+                            {this.props.formType === 'signup' ? signupForm() : null}
+                            <br/>
+                            <input className='modal-login-button' type='submit' value={this.props.formType} />
+                            {this.props.formType === 'login' ? demoSignUp() : null}
                         </div>
-                        <div className="modal-input">
-                            <input type='password'
-                                placeholder={typePassword}
-                                value={this.state.password}
-                                onChange={this.update('password')}
-                                className='login-input'
-                            />
-                        </div>
-                        {this.props.formType === 'signup' ? signupForm() : null}
-                        <br/>
-                        <input className='modal-login-button' type='submit' value={this.props.formType} />
-                        {this.props.formType === 'login' ? demoSignUp() : null}
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         )
     }

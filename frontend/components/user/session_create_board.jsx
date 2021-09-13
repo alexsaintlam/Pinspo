@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { logout } from '../../actions/session_actions';
+import { openModal } from '../../actions/modal_actions';
 import AddIcon from '@material-ui/icons/Add';
 
 class SessionCreateBoard extends React.Component {
@@ -29,6 +29,7 @@ class SessionCreateBoard extends React.Component {
     }
 
     render() {
+        const { openModal } = this.props;
         const dropMenu = () => {
             return(
                 <div className="add-drop-background" onClick={this.closeMenu}>
@@ -37,7 +38,7 @@ class SessionCreateBoard extends React.Component {
                             <div className="add-drop-title">Create</div>
                             <div className="add-drop-links">
                                 <div className="add-dropContent">Pin</div>
-                                <div className="last-add-dropContent" onClick={this.handleCreate}>Board</div>
+                                <div className="last-add-dropContent" onClick={() => openModal('createBoard')}>Board</div>
                             </div>
                         </div>
                     </div>
@@ -53,4 +54,8 @@ class SessionCreateBoard extends React.Component {
     }
 };
 
-export default SessionCreateBoard;
+const mDTP = dispatch => ({
+    openModal: modal => dispatch(openModal(modal))
+});
+
+export default connect(null, mDTP)(SessionCreateBoard);

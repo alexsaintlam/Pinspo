@@ -3,7 +3,6 @@ import { Route, Switch } from 'react-router-dom';
 import NavContainer from './nav/nav_container';
 import SplashContainer from './splash/splash_container';
 import BoardShowContainer from './board/board_show_container';
-import CreateBoardFormContainer from './board/create_board_form_container';
 import EditBoardFormContainer from './board/edit_board_form_container';
 import PinShowContainer from './pin/pin_show_container';
 import CreatePinFormContainer from './pin/create_pin_form_container';
@@ -18,7 +17,6 @@ const App = () => (
         <Route exact path="/" component={SplashContainer} />
         
         <Switch>
-            <Route path="/boards/new" component={CreateBoardFormContainer} />
             <Route path="/boards/:boardId/edit" component={EditBoardFormContainer} />
             <Route path="/pins/new" component={CreatePinFormContainer} />
             <Route path="/pins/:pinId/edit" component={EditPinFormContainer} />
