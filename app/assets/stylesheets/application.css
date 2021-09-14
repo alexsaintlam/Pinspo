@@ -1134,9 +1134,21 @@
 }
 
 .board-container {
+    position: relative;
     width: 252px;
     padding: 8px;
     cursor: pointer;
+}
+
+.board-delete {
+    color: #efefef;
+    position: absolute;
+    margin-top: -48px;
+    margin-left: 190px;
+}
+
+.board-delete:hover {
+    color: #e60023;
 }
 
 .board-container img {
