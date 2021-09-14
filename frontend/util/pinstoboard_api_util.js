@@ -13,9 +13,9 @@ export const createPinstoboard = pinstoboard => (
     })
 );
 
-export const deletePinstoboard = pinstoboard => (
+export const deletePinstoboard = pinstoboardId => (
     $.ajax({
-        url: `/api/pinstoboards/${pinstoboard.id}`,
+        url: `/api/pinstoboards/${pinstoboardId}`,
         method: 'DELETE'
     })
 );

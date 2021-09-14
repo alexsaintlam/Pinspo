@@ -30,11 +30,13 @@ class FollowIndex extends React.Component {
             }
 
             return (
-                <div className="follow-item" key={follow.id}>  
-                    <img className="follow-avatar" src={picture1} />
-                    <Link className="follow-name" to={`/users/${follow.followed_id}`} onClick={this.props.closeFollowModal}>{follow.followed_id}</Link>
-                    <div className="nav-fil"></div>
-                    {followStatus()}
+                <div className="follow-item-body">
+                    <div className="follow-item" key={follow.id}>  
+                        <img className="follow-avatar" src={picture1} />
+                        <Link className="follow-name" to={`/users/${follow.followed_id}`} onClick={this.props.closeFollowModal}>{follow.followed_id}</Link>
+                        <div className="nav-fil"></div>
+                        {followStatus()}
+                    </div>
                 </div>
             )
         }

@@ -820,6 +820,9 @@
 }
 
 .follow-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 552px;
 }
 
@@ -827,7 +830,7 @@
     width: 495px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 4px 24px;
 }
 
@@ -1474,7 +1477,7 @@
 .create-button-contnainer {
     display: flex;
     justify-content: right;
-    align-items: center;
+    align-items: center;;
     height: 112px;
     width: 540px;
     padding: 32px;

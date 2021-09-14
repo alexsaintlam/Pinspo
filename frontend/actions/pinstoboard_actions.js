@@ -14,9 +14,9 @@ export const receivePinstoboard = pinstoboard => ({
     pinstoboard
 });
 
-export const removePinstoboard = pinstoboard => ({
+export const removePinstoboard = pinstoboardId => ({
     type: REMOVE_PINSTOBOARD,
-    pinstoboard
+    pinstoboardId
 });
 
 export const fetchPinstoboards = () => dispatch => (
@@ -27,6 +27,6 @@ export const createPinstoboard = pinstoboard => dispatch => (
     PinstoboardAPIUtil.createPinstoboard(pinstoboard).then(createdPinstoboard => dispatch(receivePinstoboard(createdPinstoboard)))
 );
 
-export const deletePinstoboard = pinstoboard => dispatch => (
-    PinstoboardAPIUtil.deletePinstoboard(pinstoboard).then(() => dispatch(removePinstoboard(pinstoboard)))
+export const deletePinstoboard = pinstoboardId => dispatch => (
+    PinstoboardAPIUtil.deletePinstoboard(pinstoboardId).then(() => dispatch(removePinstoboard(pinstoboardId)))
 );

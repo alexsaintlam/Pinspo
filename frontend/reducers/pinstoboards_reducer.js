@@ -15,7 +15,7 @@ const PinstoboardsReducer = (state = {}, action) => {
             nextState[action.pinstoboard.id] = action.pinstoboard
             return nextState;
         case REMOVE_PINSTOBOARD:
-            delete nextState[action.pinstoboard.id];
+            delete nextState[action.pinstoboardId];
             return nextState;
         default:
             return state;

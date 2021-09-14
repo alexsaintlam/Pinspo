@@ -1,0 +1,177 @@
+.save-unorganized-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.save-picture-container {
+    display: flex;
+    position: relative
+}
+
+.save-board-pin {
+    display: flex;
+    box-sizing: border-box;
+    cursor: zoom-in;
+    border-radius: 16px;
+    object-fit: cover;
+    margin: 8px;
+    width: 275px;
+}
+.save-drop {
+    display: flex;
+    position: absolute;
+    width: 100%;
+}
+
+.save-drop-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    z-index: 1;
+}
+
+.save-drop-sub {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.save-button {
+    top: 10px;
+    right: 18px;
+    border: 0;
+    min-height: 48px;
+    min-width: 60px;
+    border-radius: 24px;
+    cursor: pointer;
+    background-color: #e60023;
+    font-size: 16px;
+    color: white;
+    font-weight: 700;
+    padding: 12px 16px 12px 16px;
+}
+
+.save-drop-header {
+    color: white;
+}
+.save-sub-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+}
+
+.save-drop-menu {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: 5rem;
+    width: 360px;
+    height: 480px;
+    border-radius: 16px;
+    background-color: white;
+}
+
+.save-menu-body {
+    padding: 0px 16px;
+}
+
+.save-menu-header {
+    display: flex;
+    height: 52px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 32px;
+}
+
+.save-allboards {
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.save-menu-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+    height: 64px;
+    cursor: pointer;
+}
+
+.save-menu-item-container {
+    display: flex;
+    flex-direction: row;
+    height: 480px;
+    overflow: auto;
+}
+
+.save-avatar {
+    width: 48px;
+    height: 48px;
+    background-color: #ddd;
+    border-radius: 8px;
+    margin-right: 8px;
+}
+
+.save-item-save {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    padding: 8px;
+}
+
+.save-inner-button {
+    display: flex;
+    border: 0;
+    min-height: 40px;
+    min-width: 60px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    cursor: pointer;
+    background-color: #e60023;
+    font-size: 16px;
+    color: white;
+    font-weight: 700;
+    padding: 8px 12px 8px 12px;
+}
+
+.save-inner-unsave {
+    display: flex;
+    border: 0;
+    min-height: 40px;
+    min-width: 60px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    cursor: pointer;
+    background-color: black;
+    font-size: 16px;
+    color: white;
+    font-weight: 700;
+    padding: 8px 12px 8px 12px;
+}
+
+.save-background {
+     top: 0;
+     bottom: 0;
+     right: 0;
+     left: 0;
+}
+
+.nav-fil {
+    flex-grow: 1;
+}
+
+
+
