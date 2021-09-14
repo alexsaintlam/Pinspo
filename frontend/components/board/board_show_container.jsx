@@ -5,7 +5,6 @@ import BoardShow from './board_show';
 const mSTP = (state, ownProps) => {
     return({
         board: state.entities.boards[ownProps.match.params.boardId],
-        // pins: state.entities.boards[ownProps.match.params.boardId].pins
     })
 }
 

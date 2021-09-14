@@ -25,7 +25,7 @@ class NonSessionShow extends React.Component {
         return (
             <div className="user-container">
                 <div className="non-session-button">{followStatus()}</div>
-                <NonSessionSwitch />
+                <NonSessionSwitch profileId={profileId} />
             </div>
         
             

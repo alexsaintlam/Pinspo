@@ -5,7 +5,7 @@ import BoardForm from './board_form';
 
 class EditBoardForm extends React.Component {
     componentDidMount() {
-        this.props.fetchBoard(this.props.match.params.boardId);
+        this.props.fetchBoard(this.props.boardId);
     }
 
     render () {
@@ -13,24 +13,16 @@ class EditBoardForm extends React.Component {
 
         if (!board) return null;
         return (
-            <div>
-                <div className="edit-header">Edit your board</div>
-                <div className="edit-name-container">
-                    <div className="edit-name">Name</div>
-                    <input className="edit-name-input"></input>
-                </div>
-                <div className="edit-description-container">
-                <div className="edit-description">Description</div>
-                <input className="edit-description-input"></input>
-                </div>
-
-            </div>
+            <BoardForm
+                board={board}
+                formType={formType}
+                submitBoard={submitBoard} />
         );
     }
 }
 
 const mSTP = ({entities: {boards}}, ownProps) => ({
-    board: boards[ownProps.match.params.boardId],
+    boardId: boards[ownProps.match.params.boardId],
     formType: 'Update Board'
 })
 

@@ -7,10 +7,12 @@ import SessionCreateBoard from './session_create_board';
 
 class SessionShow extends React.Component {
     render() {
+        const { user, profileId, sessionId } = this.props;
+
         return (
             <div className="session-show-body">
                 <SessionCreateBoard />
-                <BoardIndex />
+                <BoardIndex user={user} profileId={profileId} sessionId={sessionId}/>
                 <div className="session-line-container">
                     <hr className="session-line" />
                 </div>
@@ -21,7 +23,7 @@ class SessionShow extends React.Component {
                     </div>
                     
                 </div>
-                <PinIndex />
+                <PinIndex profileId={profileId} />
             </div>
         )  
     }

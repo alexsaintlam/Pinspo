@@ -1,0 +1,195 @@
+.board-edit {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 32px;
+}
+
+.edit-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 540px;
+}
+
+.edit-header-container {
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    padding: 16px 0px;
+}
+
+.edit-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.edit-modal-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 32px;
+}
+
+.edit-name-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    height: 72px;
+}
+
+.edit-name {
+    font-size: 12px;
+}
+
+.edit-name-input {
+    font-size: 16px;
+    height: 28px;
+    width: 440px;
+    padding: 8px 16px;
+    border-radius: 16px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #ddd;
+    outline: none;
+    background-color: transparent;
+}
+
+.edit-name-input:focus {
+    box-shadow: 0 0 0 4px rgb(0 132 255 / 50%);
+    outline: 0;
+}
+
+.edit-description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    height: 116px;
+}
+
+.edit-description {
+    font-size: 12px;
+}
+
+.edit-description-input {
+    font-size: 16px;
+    height: 72px;
+    width: 440px;
+    padding: 8px 16px;
+    border-radius: 16px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #ddd;
+    outline: none;
+    background-color: transparent;
+}
+
+.edit-description-input:focus {
+    box-shadow: 0 0 0 4px rgb(0 132 255 / 50%);
+    outline: 0;
+}
+
+.edit-settings-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+
+.edit-settings {
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.edit-settings-body {
+    display: flex;
+    
+}
+
+.edit-setting-sub {
+    padding-left: 4px;
+}
+
+.edit-setting-desc1 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111;
+}
+
+.edit-setting-desc2 {
+    display: flex;
+}
+
+.edit-desc2-sub1 {
+    font-size: 16px;
+    color: #767676;
+}
+
+.edit-desc2-sub2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #767676;
+    margin-left: 6px;
+}
+
+.edit_action-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-action {
+    font-size: 12px;
+}
+
+.edit-action-delete {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 12px 0px;
+    cursor: pointer;
+}
+
+.edit-action-desc1 {
+    font-size: 16px;
+    color: #767676;
+    margin-bottom: 4px;
+}
+
+.edit-action-desc2 {
+    font-size: 16px;
+    color: #767676;
+}
+
+.edit-submit-container {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 80px;
+    padding: 32px 0px;
+}
+
+.edit-submit-button {
+    border: 0;
+    min-height: 48px;
+    border-radius: 24px;
+    cursor: pointer;
+    background-color: #e60023;
+    font-size: 16px;
+    color: white;
+    font-weight: 700;
+    padding: 12px 16px 12px 16px;
+}
+
+.edit-submit-button:hover {
+    background-color: #ad081b;
+}
+
+
+

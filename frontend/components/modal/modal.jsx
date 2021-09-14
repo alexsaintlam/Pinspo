@@ -4,11 +4,13 @@ import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
 import BoardForm from '../board/board_form_container';
+import EditBoardFormContainer from '../board/edit_board_form_container';
 
 const Modal = ({modal, closeModal}) => {
     if (!modal) {
         return null;
     }
+
     let component;
     switch (modal) {
         case 'login':
@@ -20,13 +22,16 @@ const Modal = ({modal, closeModal}) => {
         case 'createBoard':
             component = <BoardForm />;
             break;
+        case 'editBoard':
+            component = <EditBoardFormContainer />;
+        break;
         default:
-            debugger
+
             return null;
     }
     return (
         <div className="modal-background" onClick={closeModal}>
-                { component }
+            { component }
         </div>
     );
 };

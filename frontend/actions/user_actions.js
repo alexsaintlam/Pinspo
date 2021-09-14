@@ -8,9 +8,9 @@ export const receiveUsers = users => ({
     users
 });
 
-export const receiveUser = userId => ({
+export const receiveUser = user => ({
     type: RECEIVE_USER,
-    userId
+    user
 });
 
 export const fetchUsers = () => dispatch => (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PinIndex from '../pin/pin_index_container';
+import PinstoboardIndex from '../pinstoboard/pinstoboard_index_container';
 
 class BoardShow extends React.Component {
     componentDidMount() {
@@ -8,7 +8,7 @@ class BoardShow extends React.Component {
     }
 
     render() {
-        const { board, pins } = this.props;
+        const { board } = this.props;
         if (!board) return null;
 
         return(
@@ -22,7 +22,7 @@ class BoardShow extends React.Component {
                         <div className="show-board-desc">{board.description}</div>
                     </div>
                     <div className="show-board-follows">229 Hardcoded</div>
-                    <PinIndex />
+                    <PinstoboardIndex board={board} />
                 </div>
             </div>
         )

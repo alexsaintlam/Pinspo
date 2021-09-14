@@ -9,15 +9,16 @@ class PinIndex extends React.Component {
     }
 
     render () {
-        const { pins, deletePin } = this.props;
+        const { pins, deletePin, profileId } = this.props;
         let pinsArr = Object.values(pins);
+        let profilePinsArr = pinsArr.filter(pin => pin.user_id === profileId)
 
         return (
             <div>
                 <div className="unorganized-gallery">
                     <div className="unorganized-image">
                         {
-                            pinsArr.map(pin => <PinIndexItem 
+                            profilePinsArr.map(pin => <PinIndexItem 
                                                         pin={pin}
                                                         deletePin={deletePin}
                                                         key={pin.id}

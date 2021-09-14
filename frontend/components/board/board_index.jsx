@@ -8,12 +8,14 @@ class BoardIndex extends React.Component {
     }
 
     render () {
-        const { boards, deleteBoard } = this.props;
+        const { boards, deleteBoard, user, profileId, sessionId } = this.props;
         let boardsArr = Object.values(boards);
+        let profileBoardsArr = boardsArr.filter(board => board.user_id === profileId);
+
         return (
             <div className="session-show-gallery">
                 {
-                    boardsArr.map(board => <BoardIndexItem
+                    profileBoardsArr.map(board => <BoardIndexItem
                                                 board={board}
                                                 deleteBoard={deleteBoard}
                                                 key={board.id}

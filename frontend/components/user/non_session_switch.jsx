@@ -23,10 +23,12 @@ class NonSessionSwitch extends React.Component {
     }
 
     render() {
+        const { profileId } = this.props;
+
         const showBoardForm = () => {
             return(
                 <div>
-                    <BoardIndex />
+                    <BoardIndex profileId={profileId} />
                 </div>
             )
         }
@@ -34,7 +36,7 @@ class NonSessionSwitch extends React.Component {
         const showPinsForm = () => {
             return(
                 <div>
-                    <PinIndex />
+                    <PinIndex profileId={profileId}/>
                 </div>
             )
         }
