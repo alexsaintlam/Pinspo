@@ -25,8 +25,8 @@ class NavDrop extends React.Component {
 
     handleLogOut(e) {
         e.preventDefault();
-        this.props.logout();
-        window.location.replace("#/")
+        this.props.logout().then(
+            window.location.replace("#/"))
     }
 
     render() {

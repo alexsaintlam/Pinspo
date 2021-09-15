@@ -8,13 +8,16 @@ import PinShowContainer from './pin/pin_show_container';
 import CreatePinFormContainer from './pin/create_pin_form_container';
 import EditPinFormContainer from './pin/edit_pin_form_container';
 import UserShowContainer from './user/user_show_container';
+import HomeIndexContainer from './pin/home_pin_index_container';
 import Modal from './modal/modal';
 
 const App = () => (
     <div>
         <Modal />
         <NavContainer />
+        <Route exact path="/" component={HomeIndexContainer} />
         <Route exact path="/" component={SplashContainer} />
+        
         
         <Switch>
             <Route path="/boards/:boardId/edit" component={EditBoardFormContainer} />

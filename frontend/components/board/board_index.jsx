@@ -5,10 +5,12 @@ import { Link } from 'react-router-dom';
 class BoardIndex extends React.Component {
     componentDidMount() {
         this.props.fetchBoards();
+        this.props.fetchPinstoboards();
+        this.props.fetchPins();
     }
 
     render () {
-        const { boards, deleteBoard, user, profileId, sessionId } = this.props;
+        const { boards, deleteBoard, profileId, pinstoboards, pins } = this.props;
         let boardsArr = Object.values(boards);
         let profileBoardsArr = boardsArr.filter(board => board.user_id === profileId);
 
@@ -16,9 +18,11 @@ class BoardIndex extends React.Component {
             <div className="session-show-gallery">
                 {
                     profileBoardsArr.map(board => <BoardIndexItem
+                                                pins={pins}
                                                 board={board}
                                                 deleteBoard={deleteBoard}
                                                 key={board.id}
+                                                pinstoboards={pinstoboards}
                                         />
                                 )
                 }

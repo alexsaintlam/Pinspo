@@ -2,8 +2,8 @@ import { BorderAll } from '@material-ui/icons';
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { openModal } from '../../actions/modal_actions';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
+import BoardItemPins from './board_item_pins';
 
 class BoardIndexItem extends React.Component {
     constructor(props) {
@@ -11,13 +11,16 @@ class BoardIndexItem extends React.Component {
     }
 
     render() {
-        const { board, deleteBoard, openModal } = this.props;
+        const { board, deleteBoard, pinstoboards, pins } = this.props;
         if (!board) return null;
+        if (!pins) return null;
         
         return (
             <div>
                 <div className="board-container">
-                    <Link to={`/boards/${board.id}`}><img src={picture1} /></Link>
+                    <Link to={`/boards/${board.id}`}>            
+                    <BoardItemPins board={board} pinstoboards={pinstoboards} pins={pins}/> 
+                    </Link>
                     <div className="board-delete" onClick={() => deleteBoard(board)}><DeleteForeverIcon style={{ fontSize: 40 }}/></div>
                     <div className="board-insight">
                         <div className="board-title">{board.name}</div>

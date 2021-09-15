@@ -1,11 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PinFeedbackForm from './pin_feedback_form'
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import PinSaveDrop from './pin_save_drop';
+import PinUserShow from './pin_user_container';
 
 class PinShow extends React.Component {
     componentDidMount() {
-        this.props.fetchPin(this.props.match.params.pinId)
+        this.props.fetchUser(this.props.pin.user_id)
+            .then(() =>{
+                this.props.fetchPins()
+                    .then(() =>{
+                        this.props.fetchPin(this.props.match.params.pinId)
+            })
+        })
+        
+        
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -15,35 +23,25 @@ class PinShow extends React.Component {
     }
 
     render() {
-        const { pin } = this.props;
+        const { pin, users } = this.props;
         if (!pin) return null;
-
+ 
         return(
             <div className="pin-background" onClick={this.handleSubmit}>
                 <div className="pin-container">
                     <div className="pin-body" onClick={e => e.stopPropagation()}>
                         <div className="pin-picture">
-                            <img src={picture3} />
+                            <img src={pin.photoUrl} />
                         </div>
                         <div className="pin-side">
                             <div className="pin-header">
                                 <div className='pin-dropdown'>
-                                    <div className="pin-save-board">Profile</div>
-                                    <div className="pin-dropdown-icon"><ExpandMoreIcon /></div>
+                                <PinSaveDrop pin={pin}/>
                                 </div>
-                                <button className="pin-save">Save</button>
                             </div>
                             <div className="pin-title">{pin.title}</div>
                             <div className="pin-description">{pin.description}</div>
-                            <div className="author-container">
-                                <img className="pin-avatar" src={picture2} />
-                                <div className="pin-user">
-                                    <div className="pin-username">Sample User</div>
-                                    <div className="pin-followers">100 followers</div>
-                                </div>
-                                <div className="nav-fil"></div>
-                                <button className="pin-unfollow" >Following</button>
-                            </div>
+                            <PinUserShow pin={pin} users={users} />
                             <PinFeedbackForm />
                         </div>
                     </div>

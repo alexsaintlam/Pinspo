@@ -3,23 +3,22 @@ import PinIndexItem from './pin_index_item';
 import { Link } from 'react-router-dom';
 
 
-class PinIndex extends React.Component {
+class HomePinIndex extends React.Component {
     componentDidMount() {
         this.props.fetchPins();
+        this.props.fetchUsers();
     }
 
     render () {
         const { pins, deletePin, profileId } = this.props;
         let pinsArr = Object.values(pins);
-        
-        let profilePinsArr = pinsArr.filter(pin => pin.user_id === profileId)
 
-        return (
+        const homeIndex = () => (
             <div>
                 <div className="unorganized-gallery">
                     <div className="unorganized-image">
                         {
-                            profilePinsArr.map(pin => <PinIndexItem 
+                            pinsArr.map(pin => <PinIndexItem 
                                                         pin={pin}
                                                         deletePin={deletePin}
                                                         key={pin.id}
@@ -31,7 +30,9 @@ class PinIndex extends React.Component {
 
             </div>
         )
+
+        return this.props.currentUser ? homeIndex() : null;
     }
 }
 
-export default PinIndex;
+export default HomePinIndex;
