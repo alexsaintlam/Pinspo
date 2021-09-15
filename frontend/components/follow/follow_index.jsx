@@ -8,7 +8,7 @@ class FollowIndex extends React.Component {
     }
 
     render () {
-        const { follows, profileId, session, deleteFollow, submitFollow } = this.props;
+        const { users, follows, profileId, session, deleteFollow, submitFollow } = this.props;
         
         let followsArr = Object.values(follows);
 
@@ -33,7 +33,7 @@ class FollowIndex extends React.Component {
                 <div className="follow-item-body">
                     <div className="follow-item" key={follow.id}>  
                         <img className="follow-avatar" src={picture1} />
-                        <Link className="follow-name" to={`/users/${follow.followed_id}`} onClick={this.props.closeFollowModal}>{follow.followed_id}</Link>
+                        <Link className="follow-name" to={`/users/${follow.followed_id}`} onClick={this.props.closeFollowModal}>{users[follow.followed_id].username}</Link>
                         <div className="nav-fil"></div>
                         {followStatus()}
                     </div>

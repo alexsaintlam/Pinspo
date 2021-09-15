@@ -5,6 +5,7 @@ import FollowerIndex from './follower_index';
 
 const mSTP = (state) => ({
     follows: Object.values(state.entities.follows),
+    users: state.entities.users
 })
 
 const mDTP = dispatch => ({

@@ -8,11 +8,12 @@ class FollowerIndex extends React.Component {
     }
 
     render () {
-        const { follows, profileId, session, deleteFollow, submitFollow } = this.props;
+        const { users, follows, profileId, session, deleteFollow, submitFollow } = this.props;
         
         let followsArr = Object.values(follows);
 
         const followList = (follow) => {
+            
             const followStatus = () => {
                 for (let i = 0; i < followsArr.length; i++) {
                     let followObj = followsArr[i];
@@ -27,9 +28,11 @@ class FollowerIndex extends React.Component {
             }
 
             return (
+                
+
                 <div className="follow-item" key={follow.id}>  
                     <img className="follow-avatar" src={picture1} />
-                    <Link className="follow-name" to={`/users/${follow.follower_id}`} onClick={this.props.closeFollowModal}>{follow.follower_id}</Link>
+                    <Link className="follow-name" to={`/users/${follow.follower_id}`} onClick={this.props.closeFollowModal}>{users[follow.follower_id].username}</Link>
                     <div className="nav-fil"></div>
                     {followStatus()}
                 </div>
