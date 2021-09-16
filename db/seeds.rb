@@ -14,6 +14,9 @@ Follow.destroy_all
 User.destroy_all
 
 user1 = User.create!(username: "DemoUser", email: "demo@demo.com", age: 1, password: "demo123")
+photo101 = URI.open("https://pinspo-storage-seed.s3.amazonaws.com/splash-101.jpg")
+user1.photo.attach(io: photo101, filename: "splash-101.jpg")
+
 user2 = User.create!(username: "Alex", email: "alex@alex.com", age: 31, password: "alex123")
 user3 = User.create!(username: "Richard", email: "richard@richard.com", age: 31, password: "alex123")
 user4 = User.create!(username: "Anthony", email: "ant@ant.com", age: 31, password: "alex123")

@@ -11,7 +11,8 @@ class UserShow extends React.Component {
     }
 
     render() {
-        const { user } = this.props;
+        const { user, users } = this.props;
+        if(!users) return null;
         if (!user) return null;
         const profileId = parseInt(this.props.match.params.userId)
         const sessionId = this.props.session
@@ -47,9 +48,9 @@ class UserShow extends React.Component {
                         <img className="user-banner" src={banner} />
                     </div>
                     <div className="user-under-banner">
-                        <img className="user-avatar" src={picture1} />
+                        <img className="user-avatar" src={users[user.id].photoUrl} />
                         <div className="user-name">{user.username}</div>
-                        <div className="user-about">Sample about filler for profile page</div>
+                        <div className="user-about">Hi I am the biggest pea brain.</div>
                         <div className="user-follow">
                             <div onClick={() => this.props.openFollowModal('following')}
                                 className="user-follow-text">{`${followerCounter()} followers`}</div>

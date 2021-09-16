@@ -17,51 +17,51 @@ class SplashPage3 extends React.Component {
                 <h2 className="splash3-h2">new best friend</h2>
                 <div className="splash-house">
                     <div className="splash-container1">
-                        <img src={pins[448].photoUrl} />
-                        <img src={pins[454].photoUrl} />
-                        <img src={pins[450].photoUrl} />
+                        <img src={pins[11].photoUrl} />
+                        <img src={pins[12].photoUrl} />
+                        <img src={pins[13].photoUrl} />
                     </div>
                 </div>
                 <div className="splash-house">
                     <div className="splash-container2">
-                        <img src={pins[451].photoUrl} />
-                        <img src={pins[452].photoUrl} />
-                        <img src={pins[453].photoUrl} />
+                        <img src={pins[14].photoUrl} />
+                        <img src={pins[15].photoUrl} />
+                        <img src={pins[16].photoUrl} />
                     </div>
                 </div>
                 <div className="splash-house">
                     <div className="splash-container3">
-                        <img src={pins[449].photoUrl} />
-                        <img src={pins[455].photoUrl} />
-                        <img src={pins[456].photoUrl} />
+                        <img src={pins[17].photoUrl} />
+                        <img src={pins[18].photoUrl} />
+                        <img src={pins[19].photoUrl} />
                     </div>
                 </div>
                 <div className="splash-house">
                     <div className="splash-container4">
-                        <img src={pins[490].photoUrl} />
-                        <img src={pins[492].photoUrl} />
-                        <img src={pins[488].photoUrl} />
+                        <img src={pins[20].photoUrl} />
+                        <img src={pins[51].photoUrl} />
+                        <img src={pins[52].photoUrl} />
                     </div>
                 </div>
                 <div className="splash-house">
                     <div className="splash-container5">
-                        <img src={pins[489].photoUrl} />
-                        <img src={pins[457].photoUrl} />
-                        <img src={pins[491].photoUrl} />
+                        <img src={pins[53].photoUrl} />
+                        <img src={pins[54].photoUrl} />
+                        <img src={pins[55].photoUrl} />
                     </div>
                 </div>
                 <div className="splash-house">
                     <div className="splash-container6">
-                        <img src={pins[494].photoUrl} />
-                        <img src={pins[493].photoUrl} />
-                        <img src={pins[497].photoUrl} />
+                        <img src={pins[56].photoUrl} />
+                        <img src={pins[57].photoUrl} />
+                        <img src={pins[58].photoUrl} />
                     </div>
                 </div>
                 <div className="splash-house">
                     <div className="splash-container7">
-                        <img src={pins[495].photoUrl} />
-                        <img src={pins[496].photoUrl} />
-                        <img src={pins[448].photoUrl} />
+                        <img src={pins[59].photoUrl} />
+                        <img src={pins[60].photoUrl} />
+                        <img src={pins[11].photoUrl} />
                     </div>
                 </div>
             </div>

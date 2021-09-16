@@ -4,6 +4,7 @@ import { openFollowModal } from '../../actions/follow_modal_actions';
 import UserShow from './user_show';
 
 const mSTP = (state, ownProps) => ({
+    users: state.entities.users,
     user: state.entities.users[ownProps.match.params.userId],
     session: state.session.id,
     follows: state.entities.follows
