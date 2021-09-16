@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import { ProtectedRoute } from '../util/route_util';
 import NavContainer from './nav/nav_container';
 import SplashContainer from './splash/splash_container';
 import BoardShowContainer from './board/board_show_container';
@@ -19,12 +20,12 @@ const App = () => (
         <Route exact path="/" component={SplashContainer} />
         
         <Switch>
-            <Route path="/boards/:boardId/edit" component={EditBoardFormContainer} />
-            <Route path="/pins/new" component={CreatePinFormContainer} />
-            <Route path="/pins/:pinId/edit" component={EditPinFormContainer} />
-            <Route exact path="/boards/:boardId" component={BoardShowContainer} />
-            <Route exact path="/pins/:pinId" component={PinShowContainer} />
-            <Route exact path="/users/:userId" component={UserShowContainer} />
+            <ProtectedRoute path="/boards/:boardId/edit" component={EditBoardFormContainer} />
+            <ProtectedRoute path="/pins/new" component={CreatePinFormContainer} />
+            <ProtectedRoute path="/pins/:pinId/edit" component={EditPinFormContainer} />
+            <ProtectedRoute exact path="/boards/:boardId" component={BoardShowContainer} />
+            <ProtectedRoute exact path="/pins/:pinId" component={PinShowContainer} />
+            <ProtectedRoute exact path="/users/:userId" component={UserShowContainer} />
         </Switch>
     </div>
 );

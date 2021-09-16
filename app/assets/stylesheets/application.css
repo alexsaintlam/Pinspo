@@ -62,7 +62,6 @@
 .nav-icon {
     display: flex;
     justify-self: flex-end;
-
     color: #e60023;
 }
 
@@ -1111,6 +1110,7 @@
 
 .session-add {
     display: flex;
+    position: relative;
     justify-content: right;
     padding-right: 16px;
     padding-bottom: 16px;
