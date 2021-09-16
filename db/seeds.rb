@@ -22,8 +22,7 @@ user6 = User.create!(username: "Winnie", email: "Winnie@chris.com", age: 31, pas
 user7 = User.create!(username: "Cindy", email: "Cindy@chris.com", age: 31, password: "alex123")
 user8 = User.create!(username: "Julian", email: "Julians@chris.com", age: 31, password: "alex123")
 user9 = User.create!(username: "James", email: "James@chris.com", age: 31, password: "alex123")
-user10 = User.create!(username: "Baldy", email: "Baldy@chris.com", age: 31, password: "alex123")
-
+user10 = User.create!(username: "Baldy", email: "Chris@me.com", age: 31, password: "alex123")
 
 board1 = Board.create!(name: "boardName1", description: "boardDesc1", public: true, user_id: user1.id)
 board2 = Board.create!(name: "boardName2", description: "boardDesc2", public: true, user_id: user1.id)
@@ -33,7 +32,7 @@ board5 = Board.create!(name: "boardName5", description: "boardDesc5", public: tr
 
 pin1 = Pin.create!(title: "pinTitle1", description: "pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1", organized: true, user_id: user1.id)
 photo1 = URI.open("https://pinspo-storage-seed.s3.amazonaws.com/splash-1.jpg")
-pin1.photo.attach(io: photo1, filename: "splash-1-1.jpg")
+pin1.photo.attach(io: photo1, filename: "splash-1.jpg")
 
 pin2 = Pin.create!(title: "pinTitle2", description: "pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1pinDesc2", organized: true, user_id: user2.id)
 photo2 = URI.open("https://pinspo-storage-seed.s3.amazonaws.com/splash-2.jpg")
