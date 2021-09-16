@@ -1474,7 +1474,7 @@
 }
 
 .board-input-name:focus {
-    box-shadow: 0 0 0 4px rgb(0 132 255 / 50%);
+    box-shadow: 0 0 0 4px rgb(0 132 255 / .50);
     outline: 0;
 }
 
