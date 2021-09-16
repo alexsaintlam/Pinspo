@@ -79,14 +79,16 @@ class SaveDrop extends React.Component {
         }
 
         return (
+            <div className="save-drop">
                 <div className="save-drop-container">
                     <div className="save-drop-sub" onClick={this.showMenu}>
                         <div className="save-sub-title">Choose board</div>
                         <div className="save-drop-header"><ExpandMoreIcon /></div>
+                        <button className="save-button">Save</button>
                     </div>
-                    <button className="save-button">Save</button>
-                    {this.state.showMenu ? dropMenu() : null }
                 </div>
+                {this.state.showMenu ? dropMenu() : null }
+            </div>
         )
     }
 };

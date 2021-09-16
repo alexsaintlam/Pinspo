@@ -5,6 +5,7 @@ import HomePinIndex from './home_pin_index';
 
 const mSTP = state => ({
     pins: Object.values(state.entities.pins),
+    users: state.entities.users,
     currentUser: state.entities.users[state.session.id]
 
 })

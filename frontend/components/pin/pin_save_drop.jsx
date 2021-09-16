@@ -40,9 +40,9 @@ class PinSaveDrop extends React.Component {
                    
                     if (pinBoard.board_id === board.id) {
                         return (
-                            <div className="pin-item-save">
+                            <div className="pin-item-save" onClick={() => deletePinstoboard(pinBoard.id)}>
                                 <div className="pin-avatar"></div>
-                                <div onClick={() => deletePinstoboard(pinBoard.id)}>{board.name}</div>
+                                <div className="pin-test123">{board.name}</div>
                                 <div className="nav-fil"></div>
                                 <button className="pin-inner-unsave">Unsave</button>
                             </div>
@@ -51,9 +51,9 @@ class PinSaveDrop extends React.Component {
                 }
                
                 return (
-                    <div className="pin-item-save">
+                    <div className="pin-item-save" onClick={() => createPinstoboard({pin_id: pin.id, board_id: board.id})}>
                         <div className="pin-avatar"></div>
-                        <div onClick={() => createPinstoboard({pin_id: pin.id, board_id: board.id})}>{board.name}</div>
+                        <div>{board.name}</div>
                         <div className="nav-fil"></div>
                         <button className="pin-inner-button">Save</button>
                     </div>

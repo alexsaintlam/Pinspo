@@ -18,7 +18,6 @@ const App = () => (
         <Route exact path="/" component={HomeIndexContainer} />
         <Route exact path="/" component={SplashContainer} />
         
-        
         <Switch>
             <Route path="/boards/:boardId/edit" component={EditBoardFormContainer} />
             <Route path="/pins/new" component={CreatePinFormContainer} />

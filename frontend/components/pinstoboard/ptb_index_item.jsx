@@ -6,6 +6,9 @@ class PtbIndexItem extends React.Component {
 
     render () {
         const { ptb, pins } = this.props;
+
+        if (!pins) return null;
+        if (Object.values(pins).length < 1) return null;
         
         const pinsArr = Object.values(pins)
 
@@ -15,8 +18,8 @@ class PtbIndexItem extends React.Component {
 
         return (
             <div className="save-picture-container">
+                <SaveDrop ptb={ptb} />
                 <Link to={`/pins/${ptb.pin_id}`} className="pin-link"><img className="save-board-pin" src={pinsArr[pinObj].photoUrl} /></Link>
-                <div className="save-drop"><SaveDrop ptb={ptb} /></div>
             </div>
         )
     }
@@ -25,15 +28,7 @@ class PtbIndexItem extends React.Component {
 
 export default PtbIndexItem;
 
-// const PtbIndexItem = (props) => {
 
-//     return (
-//         <div className="save-picture-container">
-//             <Link to={`/pins/${props.ptb.pin_id}`} className="pin-link"><img className="save-board-pin" src={picture2} /></Link>
-//             <div className="save-drop"><SaveDrop ptb={props.ptb} /></div>
-//         </div>
-//     )
-// }
 
 
 

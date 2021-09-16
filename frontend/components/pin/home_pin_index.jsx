@@ -10,8 +10,10 @@ class HomePinIndex extends React.Component {
     }
 
     render () {
-        const { pins, deletePin, profileId } = this.props;
+        const { pins, deletePin, users } = this.props;
+        if (!users) return null;
         let pinsArr = Object.values(pins);
+        
 
         const homeIndex = () => (
             <div>
@@ -27,7 +29,6 @@ class HomePinIndex extends React.Component {
                         }
                     </div>
                 </div>
-
             </div>
         )
 

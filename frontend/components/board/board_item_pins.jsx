@@ -12,6 +12,7 @@ class BoardItemPins extends React.Component {
 
     render () {
         const { pinstoboards, board, pins } = this.props;
+        if (!pins) return null;
         if (Object.values(pins).length < 1) return null;
         if (!board) return null;
         
@@ -42,13 +43,17 @@ class BoardItemPins extends React.Component {
                     <img className="board-img-middle" src={avatarArr[1].photoUrl} />
                 </div>
             )
-        } else {
+        } else if (avatarArr.length === 3) {
             return (
                 <div className="board-container-img">
                     <img className="board-img-left" src={avatarArr[0].photoUrl} />
                     <img className="board-img-middle" src={avatarArr[1].photoUrl} />
                     <img className="board-img-right" src={avatarArr[2].photoUrl} />
                 </div>
+            )
+        } else {
+            return (
+                <div className="board-container-img"></div>
             )
         }
     }

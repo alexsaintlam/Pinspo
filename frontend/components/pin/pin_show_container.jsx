@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
-import { fetchPin } from '../../actions/pin_actions';
+import { fetchPin, fetchPins } from '../../actions/pin_actions';
+import { fetchFollows } from '../../actions/follow_actions';
 import { fetchUser, fetchUsers } from '../../actions/user_actions';
 import PinShow from './pin_show';
 
@@ -13,6 +14,8 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = dispatch => ({
     fetchPins: () => dispatch(fetchPins()),
+    fetchUsers: () => dispatch(fetchUser()),
+    fetchFollows: () => dispatch(fetchFollows()),
     fetchUser: userId => dispatch(fetchUser(userId)),
     fetchPin: pinId => dispatch(fetchPin(pinId))
 })

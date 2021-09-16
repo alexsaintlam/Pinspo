@@ -4,11 +4,13 @@ import PinstoboardIndex from '../pinstoboard/pinstoboard_index_container';
 
 class BoardShow extends React.Component {
     componentDidMount() {
-        this.props.fetchBoard(this.props.match.params.boardId)
+        this.props.fetchBoard(this.props.match.params.boardId);
+        this.props.fetchUsers();
     }
 
     render() {
-        const { board } = this.props;
+        const { board, users } = this.props;
+        if (!users) return null;
         if (!board) return null;
 
         return(
@@ -17,7 +19,7 @@ class BoardShow extends React.Component {
                     <div className="show-board-title">{board.name}</div>
                     <div className="show-board-avatar"><img src={picture1} /></div>
                     <div className="show-board-info">
-                        <div className="show-board-user">Hard Coded</div>
+                        <div className="show-board-user">{users[board.user_id].username}</div>
                         <div className="show-dot">·</div>
                         <div className="show-board-desc">{board.description}</div>
                     </div>

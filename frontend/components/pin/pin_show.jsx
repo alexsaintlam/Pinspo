@@ -5,13 +5,16 @@ import PinUserShow from './pin_user_container';
 
 class PinShow extends React.Component {
     componentDidMount() {
-        this.props.fetchUser(this.props.pin.user_id)
+        this.props.fetchPin(this.props.match.params.pinId)
             .then(() =>{
-                this.props.fetchPins()
+                this.props.fetchUser(this.props.pin.user_id)
                     .then(() =>{
-                        this.props.fetchPin(this.props.match.params.pinId)
+                        this.props.fetchPins()
+                            .then(() =>{
+                                this.props.fetchFollows()
+                            })
+                    })
             })
-        })
         
         
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -25,6 +28,7 @@ class PinShow extends React.Component {
     render() {
         const { pin, users } = this.props;
         if (!pin) return null;
+        if (!users) return null;
  
         return(
             <div className="pin-background" onClick={this.handleSubmit}>

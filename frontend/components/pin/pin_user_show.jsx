@@ -4,9 +4,15 @@ import FollowClick from '../follow/follow_click_container';
 import UnfollowClick from '../follow/unfollow_click_container';
 
 class PinUserShow extends React.Component {
+    componentDidMount() {
+        this.props.fetchFollows();
+    }
 
     render() {
         const { users, pin, session, follows } = this.props;
+        if (Object.values(follows).length < 1) return null;
+        if (!follows) return null;
+        if (!pin) return null;
         if (!users) return null;
         let followerCount = 0;
 
@@ -29,6 +35,8 @@ class PinUserShow extends React.Component {
             }
             return (<FollowClick profileId={pin.user_id} session={session}/>)   
         }
+
+        if (!users[pin.user_id]) return null;
 
         return(   
             <div className="author-container">
