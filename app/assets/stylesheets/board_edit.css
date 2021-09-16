@@ -64,7 +64,7 @@
 }
 
 .edit-name-input:focus {
-    box-shadow: 0 0 0 4px rgb(0 132 255 / .50);
+    box-shadow: 0 0 0 4px rgba(0 132 255 / .50);
     outline: 0;
 }
 
@@ -94,7 +94,7 @@
 }
 
 .edit-description-input:focus {
-    box-shadow: 0 0 0 4px rgb(0 132 255 / .50);
+    box-shadow: 0 0 0 4px rgba(0 132 255 / .50);
     outline: 0;
 }
 
