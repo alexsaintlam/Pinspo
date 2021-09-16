@@ -230,6 +230,86 @@ pin50 = Pin.create!(title: "pinTitle50", description: "pinDespinDesc1 pinDesc1 p
 photo50 = URI.open("https://pinspo-storage-seed.s3.amazonaws.com/splash-50.jpg")
 pin50.photo.attach(io: photo50, filename: "splash-50.jpg")
 
+pin51 = Pin.create!(title: "pinTitle51", description: "pinDespinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1c51", organized: true, user_id: user5.id)
+photo51 = URI.open("https://pinspo-storage-seed.s3.amazonaws.com/splash-51.jpg")
+pin51.photo.attach(io: photo51, filename: "splash-51.jpg")
+
+pin52 = Pin.create!(title: "pinTitle52", description: "pinDespinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1c52", organized: true, user_id: user5.id)
+photo52 = URI.open("https://pinspo-storage-seed.s3.amazonaws.com/splash-52.jpg")
+pin52.photo.attach(io: photo52, filename: "splash-52.jpg")
+
+pin53 = Pin.create!(title: "pinTitle53", description: "pinDespinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1c53", organized: true, user_id: user5.id)
+photo53 = URI.open("https://pinspo-storage-seed.s3.amazonaws.com/splash-53.jpg")
+pin53.photo.attach(io: photo53, filename: "splash-53.jpg")
+
+pin54 = Pin.create!(title: "pinTitle54", description: "pinDespinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1c54", organized: true, user_id: user5.id)
+photo54 = URI.open("https://pinspo-storage-seed.s3.amazonaws.com/splash-54.jpg")
+pin54.photo.attach(io: photo54, filename: "splash-54.jpg")
+
+pin55 = Pin.create!(title: "pinTitle55", description: "pinDespinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1c55", organized: true, user_id: user5.id)
+photo55 = URI.open("https://pinspo-storage-seed.s3.amazonaws.com/splash-55.jpg")
+pin55.photo.attach(io: photo55, filename: "splash-55.jpg")
+
+pin56 = Pin.create!(title: "pinTitle56", description: "pinDespinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1c56", organized: true, user_id: user5.id)
+photo56 = URI.open("https://pinspo-storage-seed.s3.amazonaws.com/splash-56.jpg")
+pin56.photo.attach(io: photo56, filename: "splash-56.jpg")
+
+pin57 = Pin.create!(title: "pinTitle57", description: "pinDespinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1c57", organized: true, user_id: user5.id)
+photo57 = URI.open("https://pinspo-storage-seed.s3.amazonaws.com/splash-57.jpg")
+pin57.photo.attach(io: photo57, filename: "splash-57.jpg")
+
+pin58 = Pin.create!(title: "pinTitle58", description: "pinDespinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1c58", organized: true, user_id: user5.id)
+photo58 = URI.open("https://pinspo-storage-seed.s3.amazonaws.com/splash-58.jpg")
+pin58.photo.attach(io: photo58, filename: "splash-58.jpg")
+
+pin59 = Pin.create!(title: "pinTitle59", description: "pinDespinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1c59", organized: true, user_id: user5.id)
+photo59 = URI.open("https://pinspo-storage-seed.s3.amazonaws.com/splash-59.jpg")
+pin59.photo.attach(io: photo59, filename: "splash-59.jpg")
+
+pin60 = Pin.create!(title: "pinTitle60", description: "pinDespinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1c60", organized: true, user_id: user5.id)
+photo60 = URI.open("https://pinspo-storage-seed.s3.amazonaws.com/splash-60.jpg")
+pin60.photo.attach(io: photo60, filename: "splash-60.jpg")
+
+pin61 = Pin.create!(title: "pinTitle61", description: "pinDespinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1c61", organized: true, user_id: user5.id)
+photo61 = URI.open("https://pinspo-storage-seed.s3.amazonaws.com/splash-61.jpg")
+pin61.photo.attach(io: photo61, filename: "splash-61.jpg")
+
+pin62 = Pin.create!(title: "pinTitle62", description: "pinDespinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1c62", organized: true, user_id: user5.id)
+photo62 = URI.open("https://pinspo-storage-seed.s3.amazonaws.com/splash-62.jpg")
+pin62.photo.attach(io: photo62, filename: "splash-62.jpg")
+
+pin63 = Pin.create!(title: "pinTitle63", description: "pinDespinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1c63", organized: true, user_id: user5.id)
+photo63 = URI.open("https://pinspo-storage-seed.s3.amazonaws.com/splash-63.jpg")
+pin63.photo.attach(io: photo63, filename: "splash-63.jpg")
+
+pin64 = Pin.create!(title: "pinTitle64", description: "pinDespinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1c64", organized: true, user_id: user5.id)
+photo64 = URI.open("https://pinspo-storage-seed.s3.amazonaws.com/splash-64.jpg")
+pin64.photo.attach(io: photo64, filename: "splash-64.jpg")
+
+pin65 = Pin.create!(title: "pinTitle65", description: "pinDespinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1c65", organized: true, user_id: user5.id)
+photo65 = URI.open("https://pinspo-storage-seed.s3.amazonaws.com/splash-65.jpg")
+pin65.photo.attach(io: photo65, filename: "splash-65.jpg")
+
+pin66 = Pin.create!(title: "pinTitle66", description: "pinDespinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1c66", organized: true, user_id: user5.id)
+photo66 = URI.open("https://pinspo-storage-seed.s3.amazonaws.com/splash-66.jpg")
+pin66.photo.attach(io: photo66, filename: "splash-66.jpg")
+
+pin67 = Pin.create!(title: "pinTitle67", description: "pinDespinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1c67", organized: true, user_id: user5.id)
+photo67 = URI.open("https://pinspo-storage-seed.s3.amazonaws.com/splash-67.jpg")
+pin67.photo.attach(io: photo67, filename: "splash-67.jpg")
+
+pin68 = Pin.create!(title: "pinTitle68", description: "pinDespinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1c68", organized: true, user_id: user5.id)
+photo68 = URI.open("https://pinspo-storage-seed.s3.amazonaws.com/splash-68.jpg")
+pin68.photo.attach(io: photo68, filename: "splash-68.jpg")
+
+pin69 = Pin.create!(title: "pinTitle69", description: "pinDespinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1c69", organized: true, user_id: user5.id)
+photo69 = URI.open("https://pinspo-storage-seed.s3.amazonaws.com/splash-69.jpg")
+pin69.photo.attach(io: photo69, filename: "splash-69.jpg")
+
+pin70 = Pin.create!(title: "pinTitle70", description: "pinDespinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1 pinDesc1c70", organized: true, user_id: user5.id)
+photo70 = URI.open("https://pinspo-storage-seed.s3.amazonaws.com/splash-70.jpg")
+pin70.photo.attach(io: photo70, filename: "splash-70.jpg")
+
 follow1 = Follow.create!(follower_id: user5.id, followed_id: user1.id)
 follow2 = Follow.create!(follower_id: user5.id, followed_id: user2.id)
 follow3 = Follow.create!(follower_id: user5.id, followed_id: user3.id)
@@ -289,7 +369,27 @@ pintoboard46 = Pinstoboard.create!(pin_id: pin46.id, board_id: board1.id)
 pintoboard47 = Pinstoboard.create!(pin_id: pin47.id, board_id: board1.id)
 pintoboard48 = Pinstoboard.create!(pin_id: pin48.id, board_id: board1.id)
 pintoboard49 = Pinstoboard.create!(pin_id: pin49.id, board_id: board1.id)
-pintoboard49 = Pinstoboard.create!(pin_id: pin50.id, board_id: board1.id)
+pintoboard50 = Pinstoboard.create!(pin_id: pin50.id, board_id: board1.id)
+pintoboard51 = Pinstoboard.create!(pin_id: pin51.id, board_id: board2.id)
+pintoboard52 = Pinstoboard.create!(pin_id: pin52.id, board_id: board2.id)
+pintoboard53 = Pinstoboard.create!(pin_id: pin53.id, board_id: board2.id)
+pintoboard54 = Pinstoboard.create!(pin_id: pin54.id, board_id: board2.id)
+pintoboard55 = Pinstoboard.create!(pin_id: pin55.id, board_id: board2.id)
+pintoboard56 = Pinstoboard.create!(pin_id: pin56.id, board_id: board2.id)
+pintoboard57 = Pinstoboard.create!(pin_id: pin57.id, board_id: board2.id)
+pintoboard58 = Pinstoboard.create!(pin_id: pin58.id, board_id: board2.id)
+pintoboard59 = Pinstoboard.create!(pin_id: pin59.id, board_id: board2.id)
+pintoboard60 = Pinstoboard.create!(pin_id: pin60.id, board_id: board2.id)
+pintoboard61 = Pinstoboard.create!(pin_id: pin61.id, board_id: board3.id)
+pintoboard62 = Pinstoboard.create!(pin_id: pin62.id, board_id: board3.id)
+pintoboard63 = Pinstoboard.create!(pin_id: pin63.id, board_id: board3.id)
+pintoboard64 = Pinstoboard.create!(pin_id: pin64.id, board_id: board3.id)
+pintoboard65 = Pinstoboard.create!(pin_id: pin65.id, board_id: board3.id)
+pintoboard66 = Pinstoboard.create!(pin_id: pin66.id, board_id: board3.id)
+pintoboard67 = Pinstoboard.create!(pin_id: pin67.id, board_id: board3.id)
+pintoboard68 = Pinstoboard.create!(pin_id: pin68.id, board_id: board3.id)
+pintoboard69 = Pinstoboard.create!(pin_id: pin69.id, board_id: board3.id)
+pintoboard70 = Pinstoboard.create!(pin_id: pin70.id, board_id: board3.id)
 
 
 

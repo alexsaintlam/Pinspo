@@ -18,7 +18,7 @@ class PtbIndexItem extends React.Component {
 
         return (
             <div className="save-picture-container">
-                <SaveDrop ptb={ptb} />
+                <div className="save-hover-child"><SaveDrop ptb={ptb} pins={pins}/></div>
                 <Link to={`/pins/${ptb.pin_id}`} className="pin-link"><img className="save-board-pin" src={pinsArr[pinObj].photoUrl} /></Link>
             </div>
         )

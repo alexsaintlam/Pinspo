@@ -40,18 +40,18 @@ class PinSaveDrop extends React.Component {
                    
                     if (pinBoard.board_id === board.id) {
                         return (
-                            <div className="pin-item-save" onClick={() => deletePinstoboard(pinBoard.id)}>
+                            <div key={board.id}className="pin-item-save" onClick={() => deletePinstoboard(pinBoard.id)}>
                                 <div className="pin-avatar"></div>
                                 <div className="pin-test123">{board.name}</div>
                                 <div className="nav-fil"></div>
                                 <button className="pin-inner-unsave">Unsave</button>
                             </div>
-                            )
+                        )
                     }
                 }
                
                 return (
-                    <div className="pin-item-save" onClick={() => createPinstoboard({pin_id: pin.id, board_id: board.id})}>
+                    <div key={board.id} className="pin-item-save" onClick={() => createPinstoboard({pin_id: pin.id, board_id: board.id})}>
                         <div className="pin-avatar"></div>
                         <div>{board.name}</div>
                         <div className="nav-fil"></div>
@@ -62,30 +62,30 @@ class PinSaveDrop extends React.Component {
     
             return(
                 
-                    <div className="pin-drop-menu">
-                        <div className="pin-menu-header">Save</div>
-                        <div className="pin-menu-body">
-                            <div className="pin-allboards">All boards</div>
-                            <div className="pin-menu-item-container">
-                                <div className="pin-menu-items">
-                                    { usersBoards.map((board, i) => saveStatus(board, i)) }
-                                </div>
+                <div key={pin.id} className="pin-drop-menu">
+                    <div className="pin-menu-header">Save</div>
+                    <div className="pin-menu-body">
+                        <div className="pin-allboards">All boards</div>
+                        <div className="pin-menu-item-container">
+                            <div className="pin-menu-items">
+                                { usersBoards.map((board, i) => saveStatus(board, i)) }
                             </div>
                         </div>
                     </div>
+                </div>
                
             )
         }
 
         return (
-                <div className="pin-drop-container">
-                    <div className="pin-drop-sub" onClick={this.showMenu}>
-                        <div className="pin-sub-title">Choose board</div>
-                        <div className="pin-drop-header"><ExpandMoreIcon /></div>
-                    </div>
-                    <button className="save-button">Save</button>
-                    {this.state.showMenu ? dropMenu() : null }
+            <div key={pin.id} className="pin-drop-container">
+                <div className="pin-drop-sub" onClick={this.showMenu}>
+                    <div className="pin-sub-title">Choose board</div>
+                    <div className="pin-drop-header"><ExpandMoreIcon /></div>
                 </div>
+                <button className="save-button">Save</button>
+                {this.state.showMenu ? dropMenu() : null }
+            </div>
         )
     }
 };

@@ -29,20 +29,21 @@ class SaveDrop extends React.Component {
     }
 
     render() {
-        const { currentUser, boards, ptbs, ptb, createPinstoboard, deletePinstoboard } = this.props;
+        const { currentUser, boards, ptbs, ptb, pins, createPinstoboard, deletePinstoboard } = this.props;
+
         const dropMenu = () => {
             let usersBoards = boards.filter(board => board.user_id === currentUser.id)
             let pinBoards = ptbs.filter(pinBoard => ptb.pin_id === pinBoard.pin_id)
- 
-            const saveStatus = (board, index) => {
+            let ptbsArr = Object.values(ptbs);
+            
+            const saveStatus = (board) => {
                 for (let i = 0; i < pinBoards.length; i++) {
                     let pinBoard = pinBoards[i];
                    
                     if (pinBoard.board_id === board.id) {
-                        console.log(pinBoard)
                         return (
-                            <div className="save-item-save">
-                                <div className="save-avatar"></div>
+                            <div key={board.id} className="save-item-save">
+                                <div className="save-avatar"><img className="save-avatar-img" src={pins[ptb.pin_id].photoUrl}/></div>
                                 <div onClick={() => deletePinstoboard(pinBoard.id)}>{board.name}</div>
                                 <div className="nav-fil"></div>
                                 <button className="save-inner-unsave">Unsave</button>
@@ -50,11 +51,23 @@ class SaveDrop extends React.Component {
                             )
                     }
                 }
-               
+
+                // let ptbObj = ptbsArr.findIndex(function(otherPtb) {
+                //     return otherPtb.board_id === board.id
+                // })
+
+                // let avatarFunc;
+
+                // if (!pins[ptbsArr[ptbObj]]) {
+                //     avatarFunc = <div className="save-avatar"></div>
+                // } else {
+                //     avatarFunc = <div className="save-avatar"><img className="save-avatar-img" src={pins[ptbsArr[ptbObj].pin_id].photoUrl}/></div>
+                // }
+
                 return (
-                    <div className="save-item-save">
+                    <div key={board.id} className="save-item-save" onClick={() => createPinstoboard({pin_id: ptb.pin_id, board_id: board.id})}>
                         <div className="save-avatar"></div>
-                        <div onClick={() => createPinstoboard({pin_id: ptb.pin_id, board_id: board.id})}>{board.name}</div>
+                        <div>{board.name}</div>
                         <div className="nav-fil"></div>
                         <button className="save-inner-button">Save</button>
                     </div>
@@ -62,24 +75,22 @@ class SaveDrop extends React.Component {
             }
     
             return(
-                
-                    <div className="save-drop-menu">
+                    <div key={ptb.id} className="save-drop-menu">
                         <div className="save-menu-header">Save</div>
                         <div className="save-menu-body">
                             <div className="save-allboards">All boards</div>
                             <div className="save-menu-item-container">
                                 <div className="save-menu-items">
-                                    { usersBoards.map((board, i) => saveStatus(board, i)) }
+                                    { usersBoards.map((board) => saveStatus(board)) }
                                 </div>
                             </div>
                         </div>
                     </div>
-               
             )
         }
 
         return (
-            <div className="save-drop">
+            <div key={ptb.id} className="save-drop">
                 <div className="save-drop-container">
                     <div className="save-drop-sub" onClick={this.showMenu}>
                         <div className="save-sub-title">Choose board</div>

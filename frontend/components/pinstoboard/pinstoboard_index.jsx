@@ -18,7 +18,7 @@ class PinstoboardIndex extends React.Component {
         return (
             <div>
                 <div className="unorganized-gallery">
-                    <div className="unorganized-image">
+                    <div className="save-unorganized-image">
                         {
                             filteredPTB.map(ptb => <PtbIndexItem
                                                         pins={pins}

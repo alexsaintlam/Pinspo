@@ -18,7 +18,7 @@ class FollowIndex extends React.Component {
                     let followObj = followsArr[i];
                     if (followObj.follower_id === session && followObj.followed_id === follow.followed_id) {
                         return (
-                            <div>
+                            <div key={i}>
                             <button className="follow-unfollow" onClick={() => deleteFollow(followObj)}>Unfollow</button>
                             </div>
                             
@@ -30,7 +30,7 @@ class FollowIndex extends React.Component {
             }
 
             return (
-                <div className="follow-item-body">
+                <div key={follow.id} className="follow-item-body">
                     <div className="follow-item" key={follow.id}>  
                         <img className="follow-avatar" src={picture1} />
                         <Link className="follow-name" to={`/users/${follow.followed_id}`} onClick={this.props.closeFollowModal}>{users[follow.followed_id].username}</Link>
@@ -42,7 +42,7 @@ class FollowIndex extends React.Component {
         }
 
         return (
-            <div className="follow-modal">
+            <div key={session.id} className="follow-modal">
                 <div className="follow-title">Following</div>
                 <div onClick={this.props.closeFollowModal} className="close-x"><CloseRoundedIcon /></div>
                 <div className="follow-list">

@@ -8,6 +8,22 @@
     position: relative;
 }
 
+.save-hover-child {
+    display: none;
+}
+
+.save-picture-container:hover .save-hover-child {
+    display: block;
+}
+
+.save-unorganized-image {
+    width: 1765px;
+    min-height: 100px;
+    column-count: 7;
+    column-fill: balance;
+    text-align: center;
+}
+
 .save-board-pin {
     display: flex;
     width: 236px;
@@ -96,7 +112,10 @@
 }
 
 .save-allboards {
+    display: flex;
+    justify-content: left;
     font-size: 12px;
+    padding-left: 8px;
     margin-bottom: 8px;
 }
 
@@ -124,6 +143,16 @@
     background-color: #ddd;
     border-radius: 8px;
     margin-right: 8px;
+    object-fit: cover;
+}
+
+.save-avatar-img {
+    width: 48px;
+    height: 48px;
+    background-color: #ddd;
+    border-radius: 8px;
+    margin-right: 8px;
+    object-fit: cover;
 }
 
 .save-item-save {
@@ -148,6 +177,10 @@
     color: white;
     font-weight: 700;
     padding: 8px 12px 8px 12px;
+}
+
+.save-inner-button:hover {
+    background-color: #ad081b;
 }
 
 .save-inner-unsave {

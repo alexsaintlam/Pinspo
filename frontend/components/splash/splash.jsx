@@ -9,6 +9,7 @@ class Splash extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            firstLanding: false,
             buttonPage: <SplashPage1 pins={this.props.pins}/>
         };
         this.setButton1 = this.setButton1.bind(this);
@@ -16,36 +17,43 @@ class Splash extends React.Component {
         this.setButton3 = this.setButton3.bind(this);
         this.setButton4 = this.setButton4.bind(this);
     }
-
+    
     componentDidMount() {
         this.props.fetchPins();
     }
 
     setButton1(e) {
         e.preventDefault();
-        this.setState({buttonPage: <SplashPage1 pins={this.props.pins} />});
+        this.setState({buttonPage: <SplashPage1 pins={this.props.pins} />, firstLanding: true});
     }
 
     setButton2(e) {
         e.preventDefault();
-        this.setState({buttonPage: <SplashPage2 pins={this.props.pins} />});
+        this.setState({buttonPage: <SplashPage2 pins={this.props.pins} />, firstLanding: true});
     }
 
     setButton3(e) {
         e.preventDefault();
-        this.setState({buttonPage: <SplashPage3 pins={this.props.pins} />});
+        this.setState({buttonPage: <SplashPage3 pins={this.props.pins} />, firstLanding: true});
     }
 
     setButton4(e) {
         e.preventDefault();
-        this.setState({buttonPage: <SplashPage4 pins={this.props.pins} />});
+        this.setState({buttonPage: <SplashPage4 pins={this.props.pins} />, firstLanding: true});
     }
 
     render() {
         const { pins } = this.props;
-  
+        
         if (Object.values(pins).length < 1) return null;
         if (!pins) return null;
+        let defaultButton;
+
+        if (!this.state.firstLanding) {
+            defaultButton = <SplashPage1 pins={this.props.pins} />;
+        } else {
+            defaultButton = this.state.buttonPage
+        }
 
         const signedOutSplash = () => (
             <div>
@@ -55,17 +63,17 @@ class Splash extends React.Component {
                         <div onClick={this.setButton1} className="circle-button1" tabIndex="1">
                             <FiberManualRecordIcon fontSize="small" />
                         </div>
-                        <div onClick={this.setButton2} className="circle-button2" tabIndex="1">
+                        <div onClick={this.setButton3} className="circle-button2" tabIndex="1">
                             <FiberManualRecordIcon fontSize="small" />
                         </div>
-                        <div onClick={this.setButton3} className="circle-button3" tabIndex="1">
+                        <div onClick={this.setButton2} className="circle-button3" tabIndex="1">
                             <FiberManualRecordIcon fontSize="small" />
                         </div>
                         <div onClick={this.setButton4} className="circle-button4" tabIndex="1">
                             <FiberManualRecordIcon fontSize="small" />
                         </div>
                     </div>
-                    {this.state.buttonPage}
+                    {defaultButton}
                     <div className="bottom-gradient"></div>
                 </div>
             </div>
