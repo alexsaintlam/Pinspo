@@ -31,7 +31,7 @@ class SessionForm extends React.Component {
         return (
             <ul>
                 {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
+                    <li className="error-message" key={`error-${i}`}>
                         {error}
                     </li>
                 ))}
@@ -88,7 +88,6 @@ class SessionForm extends React.Component {
                         {this.props.formType === 'signup' ? 
                             <div>Find new ideas to try</div> : null}
                         <div onClick={this.props.closeModal} className="close-x"><CloseRoundedIcon /></div>
-                        {this.renderErrors()}
                         <div className='login-form'>
                             <div className="modal-input">
                                 <input type='text'
@@ -98,6 +97,7 @@ class SessionForm extends React.Component {
                                     className='login-input'
                                 />
                             </div>
+                            {this.renderErrors()}
                             <div className="modal-input">
                                 <input type='password'
                                     placeholder={typePassword}

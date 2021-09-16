@@ -9,7 +9,7 @@ class Splash extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            buttonPage: <SplashPage1 />
+            buttonPage: <SplashPage1 pins={this.props.pins}/>
         };
         this.setButton1 = this.setButton1.bind(this);
         this.setButton2 = this.setButton2.bind(this);
@@ -17,27 +17,36 @@ class Splash extends React.Component {
         this.setButton4 = this.setButton4.bind(this);
     }
 
+    componentDidMount() {
+        this.props.fetchPins();
+    }
+
     setButton1(e) {
         e.preventDefault();
-        this.setState({buttonPage: <SplashPage1 />});
+        this.setState({buttonPage: <SplashPage1 pins={this.props.pins} />});
     }
 
     setButton2(e) {
         e.preventDefault();
-        this.setState({buttonPage: <SplashPage2 />});
+        this.setState({buttonPage: <SplashPage2 pins={this.props.pins} />});
     }
 
     setButton3(e) {
         e.preventDefault();
-        this.setState({buttonPage: <SplashPage3 />});
+        this.setState({buttonPage: <SplashPage3 pins={this.props.pins} />});
     }
 
     setButton4(e) {
         e.preventDefault();
-        this.setState({buttonPage: <SplashPage4 />});
+        this.setState({buttonPage: <SplashPage4 pins={this.props.pins} />});
     }
 
     render() {
+        const { pins } = this.props;
+  
+        if (Object.values(pins).length < 1) return null;
+        if (!pins) return null;
+
         const signedOutSplash = () => (
             <div>
                 <div className="splash-body">

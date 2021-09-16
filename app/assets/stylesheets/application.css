@@ -44,6 +44,11 @@
                 Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.error-message {
+    color: #e60023;
+    font-size: 12px;
+}
+
 .navbar{
     display: flex;
     position: sticky;
@@ -375,7 +380,7 @@
 
 .splash1-h2 {
     position: absolute;
-    top: 24%;
+    top: 26%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 60px;
@@ -385,7 +390,7 @@
 
 .splash2-h2 {
     position: absolute;
-    top: 24%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 60px;
@@ -395,7 +400,7 @@
 
 .splash3-h2 {
     position: absolute;
-    top: 24%;
+    top: 26%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 60px;
@@ -405,7 +410,7 @@
 
 .splash4-h2 {
     position: absolute;
-    top: 24%;
+    top: 26%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 60px;
@@ -505,7 +510,7 @@
     flex-direction: column;
     position: relative;
     max-width: 250px;
-    top: 55%;
+    top: 52%;
     animation: fadeIn 4s;
     -webkit-animation: fadeIn 4s;
     -moz-animation: fadeIn 4s;

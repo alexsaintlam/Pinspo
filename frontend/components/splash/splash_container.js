@@ -1,10 +1,16 @@
 import { connect } from 'react-redux';
 import Splash from './splash';
+import { fetchPins } from '../../actions/pin_actions';
 
-const mSTP = ({ session, entities: { users } }) => {
+const mSTP = state => {
     return {
-        currentUser: users[session.id]
+        currentUser: state.entities.users[state.session.id],
+        pins: state.entities.pins
     };
 };
 
-export default connect(mSTP)(Splash);
+const mDTP = dispatch => ({
+    fetchPins: () => dispatch(fetchPins())
+})
+
+export default connect(mSTP, mDTP)(Splash);
