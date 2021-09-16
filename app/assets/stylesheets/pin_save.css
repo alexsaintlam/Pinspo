@@ -98,7 +98,7 @@
     height: 480px;
     border-radius: 16px;
     background-color: white;
-    box-shadow: rgb(0 0 0 / 10%) 0px 1px 20px 0px;
+    box-shadow: RGB(0 0 0 / 10%) 0px 1px 20px 0px;
 }
 
 .pin-menu-body {
