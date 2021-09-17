@@ -18,7 +18,7 @@ Pinspo is a fullstack clone based on Pinterest.  Pinterest is an image sharing a
 * Create and interact with pins and boards
   * Create and delete pictures also known as pins</br>
   <img src="https://github.com/alexsaintlam/Pinspo/blob/main/createpin.JPG" style="height: 300px; width:500px;"></br>
-  * Create and delete boards that organize a collection of pins
+  * Create and delete boards that organize a collection of pins</br>
   <img src="https://github.com/alexsaintlam/Pinspo/blob/main/boardcreate.JPG" style="height: 300px; width:500px;"></br>
   * View and add pins from other users</br>
   <img src="https://github.com/alexsaintlam/Pinspo/blob/main/boardsave.JPG" style="height: 300px; width:500px;">
