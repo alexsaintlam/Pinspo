@@ -29,19 +29,20 @@ class PinSaveDrop extends React.Component {
     }
 
     render() {
-        const { currentUser, boards, ptbs, pin, createPinstoboard, deletePinstoboard } = this.props;
+        const { currentUser, boards, ptbs, pin, pins, createPinstoboard, deletePinstoboard } = this.props;
         const dropMenu = () => {
             let usersBoards = boards.filter(board => board.user_id === currentUser.id)
             let pinBoards = ptbs.filter(pinBoard => pin.id === pinBoard.pin_id)
+            let ptbsArr = Object.values(ptbs);
  
-            const saveStatus = (board, index) => {
+            const saveStatus = (board) => {
                 for (let i = 0; i < pinBoards.length; i++) {
                     let pinBoard = pinBoards[i];
                    
                     if (pinBoard.board_id === board.id) {
                         return (
                             <div key={board.id}className="pin-item-save" onClick={() => deletePinstoboard(pinBoard.id)}>
-                                <div className="pin-avatar"></div>
+                                <div className="pin-avatar"><img className="save-avatar-img" src={pin.photoUrl}/></div>
                                 <div className="pin-test123">{board.name}</div>
                                 <div className="nav-fil"></div>
                                 <button className="pin-inner-unsave">Unsave</button>
@@ -49,7 +50,22 @@ class PinSaveDrop extends React.Component {
                         )
                     }
                 }
-               
+
+                let pinObj;
+                for (let i = 0; i < ptbsArr.length; i++) {
+                    if (ptbsArr[i].board_id === board.id) {
+                        pinObj = ptbsArr[i];
+                        return (
+                            <div key={board.id} className="pin-item-save" onClick={() => createPinstoboard({pin_id: pin.id, board_id: board.id})}>
+                                <div className="pin-avatar"><img className="save-avatar-img" src={pins[pinObj.pin_id].photoUrl} /></div>
+                                <div>{board.name}</div>
+                                <div className="nav-fil"></div>
+                                <button className="pin-inner-button">Save</button>
+                            </div>
+                        )
+                    }
+                }
+
                 return (
                     <div key={board.id} className="pin-item-save" onClick={() => createPinstoboard({pin_id: pin.id, board_id: board.id})}>
                         <div className="pin-avatar"></div>
@@ -61,7 +77,6 @@ class PinSaveDrop extends React.Component {
             }
     
             return(
-                
                 <div key={pin.id} className="pin-drop-menu">
                     <div className="pin-menu-header">Save</div>
                     <div className="pin-menu-body">
@@ -73,7 +88,6 @@ class PinSaveDrop extends React.Component {
                         </div>
                     </div>
                 </div>
-               
             )
         }
 
@@ -94,7 +108,8 @@ const mSTP = state => {
     return({
         currentUser: state.entities.users[state.session.id],
         boards: Object.values(state.entities.boards),
-        ptbs: Object.values(state.entities.pinstoboards)
+        ptbs: Object.values(state.entities.pinstoboards),
+        pins: state.entities.pins
     })
 }
 

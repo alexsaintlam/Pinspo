@@ -19,17 +19,26 @@ user1.photo.attach(io: photo101, filename: "splash-101.jpg")
 
 user2 = User.create!(username: "Alex", email: "alex@alex.com", age: 31, password: "alex123")
 user3 = User.create!(username: "Richard", email: "richard@richard.com", age: 31, password: "alex123")
+photo102 = URI.open("https://pinspo-storage-seed.s3.amazonaws.com/splash-102.jpg")
+user3.photo.attach(io: photo102, filename: "splash-102.jpg")
+
 user4 = User.create!(username: "Anthony", email: "ant@ant.com", age: 31, password: "alex123")
+photo104 = URI.open("https://pinspo-storage-seed.s3.amazonaws.com/splash-104.jpg")
+user4.photo.attach(io: photo104, filename: "splash-104.jpg")
+
 user5 = User.create!(username: "Chris", email: "chris@chris.com", age: 31, password: "alex123")
+photo103 = URI.open("https://pinspo-storage-seed.s3.amazonaws.com/splash-103.jpg")
+user5.photo.attach(io: photo103, filename: "splash-103.jpg")
+
 user6 = User.create!(username: "Winnie", email: "Winnie@chris.com", age: 31, password: "alex123")
 user7 = User.create!(username: "Cindy", email: "Cindy@chris.com", age: 31, password: "alex123")
 user8 = User.create!(username: "Julian", email: "Julians@chris.com", age: 31, password: "alex123")
 user9 = User.create!(username: "James", email: "James@chris.com", age: 31, password: "alex123")
 user10 = User.create!(username: "Baldy", email: "Chris@me.com", age: 31, password: "alex123")
 
-board1 = Board.create!(name: "boardName1", description: "boardDesc1", public: true, user_id: user1.id)
-board2 = Board.create!(name: "boardName2", description: "boardDesc2", public: true, user_id: user1.id)
-board3 = Board.create!(name: "boardName3", description: "boardDesc3", public: true, user_id: user1.id)
+board1 = Board.create!(name: "Traveling", description: "past present and future travel ideas", public: true, user_id: user1.id)
+board2 = Board.create!(name: "Dawgs", description: "dogs > cats", public: true, user_id: user1.id)
+board3 = Board.create!(name: "Foooood", description: "sushi and pizza diet", public: true, user_id: user1.id)
 board4 = Board.create!(name: "boardName4", description: "boardDesc4", public: true, user_id: user2.id)
 board5 = Board.create!(name: "boardName5", description: "boardDesc5", public: true, user_id: user2.id)
 

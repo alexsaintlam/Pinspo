@@ -6,7 +6,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import SmsIcon from '@material-ui/icons/Sms';
 
-const Greeting = ({ currentUser, openModal }) => {
+const Greeting = ({ currentUser, openModal, users }) => {
     const signedOutNav = () => (
         <div className="navbar">
             <div className="nav-icon"><PinterestIcon style={{ fontSize: 40 }} /></div>
@@ -34,7 +34,7 @@ const Greeting = ({ currentUser, openModal }) => {
             </div>
             <div className="icon"><NotificationsIcon /></div>
             <div className="icon"><SmsIcon /></div>
-            <Link to={`/users/${currentUser.id}`}><div><img className="nav-avatar" src={picture1} /></div></Link>
+            <Link to={`/users/${currentUser.id}`}><div><img className="nav-avatar" src={users[currentUser.id].photoUrl} /></div></Link>
             <NavDrop />
         </div>
     )

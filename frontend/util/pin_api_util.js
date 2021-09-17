@@ -16,7 +16,9 @@ export const createPin = pin => (
     $.ajax({
         url: '/api/pins/',
         method: 'POST',
-        data: { pin }
+        data: pin,
+        contentType: false,
+        processData: false
     })
 );
 
@@ -28,9 +30,9 @@ export const updatePin = pin => (
     })
 );
 
-export const deletePin = pin => (
+export const deletePin = pinId => (
     $.ajax({
-        url: `/api/pins/${pin.id}`,
+        url: `/api/pins/${pinId}`,
         method: 'DELETE'
     })
 );

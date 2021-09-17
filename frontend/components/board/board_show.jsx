@@ -17,7 +17,7 @@ class BoardShow extends React.Component {
             <div className="show-board">
                 <div className="show-board-head">
                     <div className="show-board-title">{board.name}</div>
-                    <div className="show-board-avatar"><img src={picture1} /></div>
+                    <div className="show-board-avatar"><img src={users[board.user_id].photoUrl} /></div>
                     <div className="show-board-info">
                         <div className="show-board-user">{users[board.user_id].username}</div>
                         <div className="show-dot">·</div>

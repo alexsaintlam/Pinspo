@@ -762,6 +762,8 @@
     filter: grayscale(70%);
 }
 
+
+
 .gallery-save {
     position: absolute;
     display: none;
@@ -882,6 +884,7 @@
 
 .pin-container {
     display: flex;
+    position: relative;
     justify-content: center;
 }
 
@@ -979,7 +982,6 @@
     height: 48px;
     border-radius: 50%;
     padding-right: 4px;
-    box-shadow: white 0px 0px 0px 1px;
     object-fit: cover;
 }
 
@@ -1106,6 +1108,18 @@
     padding: 0px 16px;
 }
 
+.pin-delete {
+    color: white;
+    position: absolute;
+    margin-top: -69px;
+    margin-left: 190px;
+    cursor: pointer;
+}
+
+.pin-delete:hover {
+    color: #e60023;
+}
+
 .session-show-body {
     display: flex;
     flex-direction: column;
@@ -1150,6 +1164,7 @@
     position: absolute;
     margin-top: -48px;
     margin-left: 190px;
+    cursor: pointer;
 }
 
 .board-delete:hover {
@@ -1407,6 +1422,7 @@
     min-height: 35px;
     font-size: 16px;
     font-weight: 700;
+    text-decoration: none;
 }
 
 .last-add-dropContent {

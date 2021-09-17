@@ -15,7 +15,7 @@ const pinsReducer = (state = {}, action) => {
             nextState[action.pin.id] = action.pin
             return nextState;
         case REMOVE_PIN:
-            delete nextState[action.pin.id];
+            delete nextState[action.pinId];
             return nextState;
         default:
             return state;

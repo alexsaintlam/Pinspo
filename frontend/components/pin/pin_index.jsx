@@ -9,7 +9,7 @@ class PinIndex extends React.Component {
     }
 
     render () {
-        const { pins, deletePin, profileId } = this.props;
+        const { pins, deletePin, profileId, currentUser } = this.props;
         let pinsArr = Object.values(pins);
         
         let profilePinsArr = pinsArr.filter(pin => pin.user_id === profileId)
@@ -21,6 +21,7 @@ class PinIndex extends React.Component {
                         {
                             profilePinsArr.map(pin => <PinIndexItem 
                                                         pin={pin}
+                                                        currentUser={currentUser}
                                                         deletePin={deletePin}
                                                         key={pin.id}
                                                 />

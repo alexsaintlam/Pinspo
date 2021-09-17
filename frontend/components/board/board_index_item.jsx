@@ -14,6 +14,16 @@ class BoardIndexItem extends React.Component {
         const { board, deleteBoard, pinstoboards, pins } = this.props;
         if (!board) return null;
         if (!pins) return null;
+        if (!pinstoboards) return null;
+        let ptbArr = Object.values(pinstoboards)
+        let pinCount = 0;
+
+        for (let i = 0; i < ptbArr.length; i++) {
+            let ptb = ptbArr[i];
+            if (ptb.board_id === board.id) {
+                pinCount += 1;
+            }
+        }
         
         return (
             <div>
@@ -25,7 +35,7 @@ class BoardIndexItem extends React.Component {
                     <div className="board-insight">
                         <div className="board-title">{board.name}</div>
                         <div className="board-sub-title">
-                            <div className="board-pin-count">2 pins</div>
+                            <div className="board-pin-count">{pinCount} pins</div>
                             <div className="board-date">6w</div>
                         </div>
                     </div>

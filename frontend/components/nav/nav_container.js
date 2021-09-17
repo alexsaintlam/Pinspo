@@ -3,9 +3,10 @@ import { logout } from '../../actions/session_actions';
 import { openModal } from '../../actions/modal_actions';
 import Greeting from './nav';
 
-const mSTP = ({ session, entities: { users } }) => {
+const mSTP = state => {
     return {
-        currentUser: users[session.id]
+        currentUser: state.entities.users[state.session.id],
+        users: state.entities.users
     };
 };
 

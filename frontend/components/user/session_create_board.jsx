@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { openModal } from '../../actions/modal_actions';
 import AddIcon from '@material-ui/icons/Add';
 
@@ -37,7 +38,7 @@ class SessionCreateBoard extends React.Component {
                         <div className="add-drop-body">
                             <div className="add-drop-title">Create</div>
                             <div className="add-drop-links">
-                                <div className="add-dropContent">Pin</div>
+                                <Link className="add-dropContent" to="/pins/new">Pin</Link>
                                 <div className="last-add-dropContent" onClick={() => openModal('createBoard')}>Board</div>
                             </div>
                         </div>

@@ -2,13 +2,14 @@ import { connect } from 'react-redux';
 import { fetchPins, deletePin } from '../../actions/pin_actions';
 import PinIndex from './pin_index';
 
-const mSTP = ({entities: { pins }}) => ({
-    pins: Object.values(pins)
+const mSTP = state => ({
+    pins: Object.values(state.entities.pins),
+    currentUser: state.entities.users[state.session.id]
 })
 
 const mDTP = dispatch => ({
     fetchPins: () => dispatch(fetchPins()),
-    deletePin: pin => dispatch(deletePin(pin))
+    deletePin: pinId => dispatch(deletePin(pinId))
 })
 
 export default connect(mSTP, mDTP)(PinIndex);

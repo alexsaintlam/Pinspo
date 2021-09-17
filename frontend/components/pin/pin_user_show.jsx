@@ -40,7 +40,7 @@ class PinUserShow extends React.Component {
 
         return(   
             <div className="author-container">
-                <img className="pin-avatar" src={picture2} />
+                <img className="pin-avatar" src={users[pin.user_id].photoUrl} />
                 <div className="pin-user">
                     <Link className="pin-username" to={`/users/${pin.user_id}`}>{users[pin.user_id].username}</Link>
                     <div className="pin-followers">{`${followerCounter()} followers`}</div>

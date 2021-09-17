@@ -6,9 +6,10 @@ const mSTP = (state) => ({
     pin: {
         title: "",
         description: "",
-        organized: "",
-        user_id: state.session.id
+        organized: false,
+        user_id: state.session.id,
     },
+    user: state.entities.users[state.session.id],
     formType: 'Create Pin'
 })
 

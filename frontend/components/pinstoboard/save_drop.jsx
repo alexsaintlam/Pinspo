@@ -30,6 +30,7 @@ class SaveDrop extends React.Component {
 
     render() {
         const { currentUser, boards, ptbs, ptb, pins, createPinstoboard, deletePinstoboard } = this.props;
+        if (!pins) return null;
 
         const dropMenu = () => {
             let usersBoards = boards.filter(board => board.user_id === currentUser.id)
@@ -52,26 +53,28 @@ class SaveDrop extends React.Component {
                     }
                 }
 
-                // let ptbObj = ptbsArr.findIndex(function(otherPtb) {
-                //     return otherPtb.board_id === board.id
-                // })
+                let pinObj;
+                for (let i = 0; i < ptbsArr.length; i++) {
+                    if (ptbsArr[i].board_id === board.id) {
+                        pinObj = ptbsArr[i];
+                        return (
+                            <div key={board.id} className="save-item-save" onClick={() => createPinstoboard({pin_id: ptb.pin_id, board_id: board.id})}>
+                                <div className="save-avatar"><img className="save-avatar-img" src={pins[pinObj.pin_id].photoUrl} /></div>
+                                <div>{board.name}</div>
+                                <div className="nav-fil"></div>
+                                <button className="save-inner-button">Save</button>
+                            </div>
+                        )
+                    }
+                }
 
-                // let avatarFunc;
-
-                // if (!pins[ptbsArr[ptbObj]]) {
-                //     avatarFunc = <div className="save-avatar"></div>
-                // } else {
-                //     avatarFunc = <div className="save-avatar"><img className="save-avatar-img" src={pins[ptbsArr[ptbObj].pin_id].photoUrl}/></div>
-                // }
-
-                return (
-                    <div key={board.id} className="save-item-save" onClick={() => createPinstoboard({pin_id: ptb.pin_id, board_id: board.id})}>
-                        <div className="save-avatar"></div>
-                        <div>{board.name}</div>
-                        <div className="nav-fil"></div>
-                        <button className="save-inner-button">Save</button>
-                    </div>
-                    )
+                
+                return (<div key={board.id} className="save-item-save" onClick={() => createPinstoboard({pin_id: ptb.pin_id, board_id: board.id})}>
+                    <div className="save-avatar"></div>
+                    <div>{board.name}</div>
+                    <div className="nav-fil"></div>
+                    <button className="save-inner-button">Save</button>
+                </div>)
             }
     
             return(

@@ -21,6 +21,7 @@ class HomePinIndex extends React.Component {
                     <div className="unorganized-image">
                         {
                             pinsArr.map(pin => <PinIndexItem 
+                                                        users={users}
                                                         pin={pin}
                                                         deletePin={deletePin}
                                                         key={pin.id}
