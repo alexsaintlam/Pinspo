@@ -18,6 +18,9 @@ photo101 = URI.open("https://pinspo-storage-seed.s3.amazonaws.com/splash-101.jpg
 user1.photo.attach(io: photo101, filename: "splash-101.jpg")
 
 user2 = User.create!(username: "Alex", email: "alex@alex.com", age: 31, password: "alex123")
+photo105 = URI.open("https://pinspo-storage-seed.s3.amazonaws.com/splash-105.jpg")
+user2.photo.attach(io: photo105, filename: "splash-105.jpg")
+
 user3 = User.create!(username: "Richard", email: "richard@richard.com", age: 31, password: "alex123")
 photo102 = URI.open("https://pinspo-storage-seed.s3.amazonaws.com/splash-102.jpg")
 user3.photo.attach(io: photo102, filename: "splash-102.jpg")
