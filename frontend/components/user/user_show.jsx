@@ -58,7 +58,6 @@ class UserShow extends React.Component {
                             <div onClick={() => this.props.openFollowModal('followers')} 
                                 className="user-follow-text">{`${followingCounter()} following`}</div>
                         </div>
-                        
                     </div>            
                 </div>
                 {profileId === sessionId ? <SessionShow user={user} profileId={profileId} sessionId={sessionId} followsObj={followsObj}/> : 

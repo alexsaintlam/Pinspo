@@ -34,10 +34,6 @@ class NavDrop extends React.Component {
             return(
                 <div className="nav-drop-background" onClick={this.closeMenu}>
                     <div className="nav-drop">
-                        <div className="nav-dropContent">Settings</div>
-                        <div className="nav-dropContent">Tune your home feed</div>
-                        <div className="nav-dropContent">Get help</div>
-                        <div className="nav-dropContent">See terms and privacy</div>
                         <div className="last-nav-dropContent" onClick={this.props.logout}>Log out</div>
                     </div>
                 </div>

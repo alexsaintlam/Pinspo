@@ -11,11 +11,12 @@ const mSTP = (state) => ({
         user_id: state.session.id
     },
     formType: 'Create Board',
+    error: state.errors.board
 });
 
 const mDTP = dispatch => ({
     submitBoard: board => dispatch(createBoard(board)),
-    closeModal: () => dispatch(closeModal())
+    closeModal: () => dispatch(closeModal()),
 })
 
 export default connect(mSTP, mDTP)(BoardForm);

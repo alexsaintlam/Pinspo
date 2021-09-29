@@ -48,7 +48,7 @@ class SessionCreateBoard extends React.Component {
         }
         return (
             <div>
-                <div className="session-add" onClick={this.showMenu}><AddIcon style={{ fontSize: 34 }} /></div>
+                <div className="session-add" onClick={this.showMenu}><div className="session-add-icon"><AddIcon style={{ fontSize: 34 }} /></div></div>
                 {this.state.showMenu ? dropMenu() : null }
             </div>
         )

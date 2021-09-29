@@ -26,7 +26,6 @@ const Modal = ({modal, closeModal}) => {
             component = <EditBoardFormContainer />;
         break;
         default:
-
             return null;
     }
     return (

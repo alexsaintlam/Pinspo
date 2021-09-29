@@ -191,5 +191,14 @@
     background-color: #ad081b;
 }
 
+.modal-board-background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: RGB(0, 0, 0, 0.3);
+    z-index: 10;
+}
 
 

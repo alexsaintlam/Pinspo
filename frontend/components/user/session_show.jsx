@@ -19,7 +19,7 @@ class SessionShow extends React.Component {
                 <div className="session-unorganized">
                     <div className="unorganized-header">
                         <div className="header-ideas">Unorganized ideas</div>
-                        <button className="organize-button">Organize</button>
+                    
                     </div>
                     
                 </div>

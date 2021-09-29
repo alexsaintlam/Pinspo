@@ -1,9 +1,10 @@
-import { BorderAll } from '@material-ui/icons';
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
+import CreateIcon from '@material-ui/icons/Create';
 import BoardItemPins from './board_item_pins';
+import BoardModal from '../modal/board_modal';
+import { openBoardModal } from '../../actions/board_modal_actions';
 
 class BoardIndexItem extends React.Component {
     constructor(props) {
@@ -27,11 +28,12 @@ class BoardIndexItem extends React.Component {
         
         return (
             <div>
+                <BoardModal board={board} />
                 <div className="board-container">
                     <Link to={`/boards/${board.id}`}>            
                     <BoardItemPins board={board} pinstoboards={pinstoboards} pins={pins}/> 
                     </Link>
-                    <div className="board-delete" onClick={() => deleteBoard(board)}><DeleteForeverIcon style={{ fontSize: 40 }}/></div>
+                    <div className="board-delete" onClick={() => this.props.openBoardModal('edit')}><CreateIcon style={{ fontSize: 35 }}/></div>
                     <div className="board-insight">
                         <div className="board-title">{board.name}</div>
                         <div className="board-sub-title">
@@ -47,7 +49,7 @@ class BoardIndexItem extends React.Component {
 }
 
 const mDTP = dispatch => ({
-    openModal: modal => dispatch(openModal(modal))
+    openBoardModal: boardModal => dispatch(openBoardModal(boardModal))
 });
 
 export default connect(null, mDTP)(BoardIndexItem);

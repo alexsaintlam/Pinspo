@@ -9,13 +9,25 @@ class BoardForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.submitBoard(this.state).then(this.props.closeModal);
+        this.props.submitBoard(this.state).then(this.props.closeModal).then(this.props.closeBoardModal);
     }
 
     update(field) {
         return e => {
             this.setState({ [field]: e.currentTarget.value });
         }
+    }
+
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.error.map((error, i) => {
+                    return (<li className="error-message-board" key={`error-${i}`}>
+                    {error}
+                    </li>)
+                })}
+            </ul>
+        );
     }
 
     render() {
@@ -35,6 +47,7 @@ class BoardForm extends React.Component {
                                     value={this.state.name}
                                     onChange={this.update('name')}>
                                 </input>
+                                {this.renderErrors()}
                                 <div className="nav-fil"></div>
                                 <div className="board-public-container">
                                     <input className="board-public-check"
@@ -53,7 +66,7 @@ class BoardForm extends React.Component {
                                 </div>
                             </div>
                             <div className="create-button-contnainer">
-                                <button className="board-create-button" type="submit" value={this.props.formType}>Create</button>
+                                <button className={this.state.name.length > 0 ? "board-create-filled" : "board-create-button"} type="submit" value={this.props.formType}>Create</button>
                             </div>
                         </div>
                     </form>
@@ -112,7 +125,7 @@ class BoardForm extends React.Component {
                                 </div>
                                 <div className="edit-action-container">
                                     <div className="edit-action">Action</div>
-                                    <div className="edit-action-delete">Delete Board</div>
+                                    <div className="edit-action-delete" onClick={() => this.props.deleteBoard(this.props.board).then(this.props.closeBoardModal)}>Delete Board</div>
                                     <div className="edit-action-desc1">Delete this board and all its Pins forever.</div>
                                     <div className="edit-action-desc2">You can't undo this!</div>
                                 </div>

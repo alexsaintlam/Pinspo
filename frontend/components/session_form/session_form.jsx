@@ -12,6 +12,7 @@ class SessionForm extends React.Component {
             age: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.classError = this.classError.bind(this);
     }
 
     update(field) {
@@ -27,16 +28,30 @@ class SessionForm extends React.Component {
         window.location.replace('#/')
     }
 
-    renderErrors() {
+    renderErrors(errorType) {
         return (
             <ul>
-                {this.props.errors.map((error, i) => (
-                    <li className="error-message" key={`error-${i}`}>
+                {this.props.errors.map((error, i) => {
+                    if (error.split(" ")[0] === errorType) {
+                        return (<li className="error-message" key={`error-${i}`}>
                         {error}
-                    </li>
-                ))}
+                        </li>)
+                    }
+                    
+                })}
             </ul>
         );
+    }
+
+    classError(errorType) {
+        for (let i = 0; i < this.props.errors.length; i++) {
+            let error = this.props.errors[i];
+            if (error.split(" ")[0] === errorType || error.split(" ")[0] === "Invalid") {
+                return "modal-input-error"
+            }
+        }
+
+        return "modal-input"
     }
 
     handleDemoUser(e) {
@@ -50,22 +65,24 @@ class SessionForm extends React.Component {
         const signupForm = () => {
             return (
                 <div>
-                <div className="modal-input">
-                    <input type='text'
-                        placeholder="Email"
-                        value={this.state.email}
-                        onChange={this.update('email')}
-                        className='login-input'
-                    />
-                </div>
-                <div className="modal-input">
-                    <input type='text'
-                        placeholder="Age"
-                        value={this.state.age}
-                        onChange={this.update('age')}
-                        className='login-input'
-                    />
-                </div>
+                    <div className={this.classError("Email")}>
+                        <input type='text'
+                            placeholder="Email"
+                            value={this.state.email}
+                            onChange={this.update('email')}
+                            className='login-input'
+                        />
+                    </div>
+                    {this.renderErrors("Email")}
+                    <div className={this.classError("Age")}>
+                        <input type='text'
+                            placeholder="Age"
+                            value={this.state.age}
+                            onChange={this.update('age')}
+                            className='login-input'
+                        />
+                    </div>
+                    {this.renderErrors("Age")}
                 </div>
             )
         }
@@ -79,6 +96,8 @@ class SessionForm extends React.Component {
         let typePassword = 'Password';
         this.props.formType === 'signup' ? typePassword = 'Create a password' : typePassword = 'Password';
 
+        
+
         return (
             <div className="modal-child" onClick={e => e.stopPropagation()}>
                 <div className="login-form-container">
@@ -89,7 +108,7 @@ class SessionForm extends React.Component {
                             <div>Find new ideas to try</div> : null}
                         <div onClick={this.props.closeModal} className="close-x"><CloseRoundedIcon /></div>
                         <div className='login-form'>
-                            <div className="modal-input">
+                            <div className={this.classError("Username")}>
                                 <input type='text'
                                     placeholder="Username"
                                     value={this.state.username}
@@ -97,8 +116,9 @@ class SessionForm extends React.Component {
                                     className='login-input'
                                 />
                             </div>
-                            {this.renderErrors()}
-                            <div className="modal-input">
+                            {this.renderErrors("Invalid")}
+                            {this.renderErrors("Username")}
+                            <div className={this.classError("Password")}>
                                 <input type='password'
                                     placeholder={typePassword}
                                     value={this.state.password}
@@ -106,9 +126,10 @@ class SessionForm extends React.Component {
                                     className='login-input'
                                 />
                             </div>
+                            {this.renderErrors("Password")}
                             {this.props.formType === 'signup' ? signupForm() : null}
                             <br/>
-                            <input className='modal-login-button' type='submit' value={this.props.formType} />
+                            <input className='modal-login-button' type='submit' value={this.props.formType === 'signup' ? 'Sign Up' : 'Log In'} />
                             {this.props.formType === 'login' ? demoSignUp() : null}
                         </div>
                     </form>
