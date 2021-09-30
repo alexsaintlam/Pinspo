@@ -106,7 +106,9 @@ class BoardForm extends React.Component {
                                     <div className="edit-settings-body">
                                         <input className="edit-setting-checkbox"
                                             type="checkbox"
-                                            value={this.state.public}
+                                            value={false}
+                                            id={this.state.public}
+                                            name={this.state.public}
                                             onChange={this.update('public')}></input>
                                         <div className="edit-setting-sub">
                                             <div className="edit-setting-desc1">

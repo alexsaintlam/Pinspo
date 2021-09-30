@@ -276,7 +276,10 @@
 .icon {
     display: flex;
     align-items: center;
-    padding-left: 15px;
+    height: 40px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 50%;
     color: #767676;
     cursor: pointer;
 }
@@ -317,7 +320,8 @@
     height: 24px;
     border-radius: 50%;
     box-shadow: white 0px 0px 0px 1px;
-    margin-left: 15px;
+    margin-left: 8px;
+    margin-right: 8px;
     object-fit: cover;
 }
 
@@ -325,7 +329,10 @@
     display: flex;
     position: relative;
     align-items: center;
-    padding-left: 15px;
+    border-radius: 50%;
+    height: 40px;
+    padding-left: 8px;
+    padding-right: 8px;
     color: #767676;
     cursor: pointer;
 }
@@ -1213,11 +1220,18 @@
 }
 
 .board-delete {
-    color: #efefef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
     position: absolute;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
     margin-top: -44px;
-    margin-left: 10px;
+    margin-left: 190px;
     cursor: pointer;
+    background-color: white;
 }
 
 .board-delete:hover {

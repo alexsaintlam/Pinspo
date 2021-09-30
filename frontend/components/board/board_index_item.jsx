@@ -33,7 +33,7 @@ class BoardIndexItem extends React.Component {
                     <Link to={`/boards/${board.id}`}>            
                     <BoardItemPins board={board} pinstoboards={pinstoboards} pins={pins}/> 
                     </Link>
-                    <div className="board-delete" onClick={() => this.props.openBoardModal('edit')}><CreateIcon style={{ fontSize: 35 }}/></div>
+                    <div className="board-delete" onClick={() => this.props.openBoardModal('edit')}><CreateIcon style={{ fontSize: 24 }}/></div>
                     <div className="board-insight">
                         <div className="board-title">{board.name}</div>
                         <div className="board-sub-title">
