@@ -91,13 +91,23 @@ class PinSaveDrop extends React.Component {
             )
         }
 
+        let ptbsArr = Object.values(ptbs);
+
+        const ptbObj = (pinId, currUser) => (
+            ptbsArr.findIndex(function(ptb) {
+                return (ptb.unorganized_id === currUser) && (ptb.pin_id === pinId)
+            })
+        )
+
         return (
             <div key={pin.id} className="pin-drop-container">
                 <div className="pin-drop-sub" onClick={this.showMenu}>
                     <div className="pin-sub-title">Choose board</div>
                     <div className="pin-drop-header"><ExpandMoreIcon /></div>
                 </div>
-                <button className="save-button">Save</button>
+                {ptbsArr[ptbObj(pin.id, currentUser.id)] ? 
+                <button className="unsave-button" onClick={() => deletePinstoboard(ptbsArr[ptbObj(pin.id, currentUser.id)].id)}>Unsave</button> :
+                <button className="save-button" onClick={() => createPinstoboard({pin_id: pin.id, unorganized_id: currentUser.id})}>Save</button> }
                 {this.state.showMenu ? dropMenu() : null }
             </div>
         )

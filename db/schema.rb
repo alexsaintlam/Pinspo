@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_14_213241) do
+ActiveRecord::Schema.define(version: 2021_09_30_015054) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 2021_09_14_213241) do
   create_table "boards", force: :cascade do |t|
     t.string "name", null: false
     t.string "description", null: false
-    t.boolean "public", null: false
+    t.boolean "public"
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -75,9 +75,10 @@ ActiveRecord::Schema.define(version: 2021_09_14_213241) do
 
   create_table "pinstoboards", force: :cascade do |t|
     t.integer "pin_id", null: false
-    t.integer "board_id", null: false
+    t.integer "board_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "unorganized_id"
     t.index ["board_id"], name: "index_pinstoboards_on_board_id"
     t.index ["pin_id", "board_id"], name: "index_pinstoboards_on_pin_id_and_board_id", unique: true
     t.index ["pin_id"], name: "index_pinstoboards_on_pin_id"

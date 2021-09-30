@@ -805,12 +805,38 @@
     padding: 12px 16px 12px 16px;
 }
 
+.gallery-unsave {
+    position: absolute;
+    display: none;
+    top: 10px;
+    right: 18px;
+    border: 0;
+    min-height: 48px;
+    min-width: 60px;
+    border-radius: 24px;
+    cursor: pointer;
+    background-color: black;
+    font-size: 16px;
+    color: white;
+    font-weight: 700;
+    padding: 12px 16px 12px 16px;
+}
+
 .pin-link:hover + .gallery-save {
+    display: inline-block;
+}
+
+.pin-link:hover + .gallery-unsave {
     display: inline-block;
 }
 
 .gallery-save:hover {
     background-color: #ad081b;
+    display: inline-block;
+}
+
+.gallery-unsave:hover {
+    background-color: black;
     display: inline-block;
 }
 

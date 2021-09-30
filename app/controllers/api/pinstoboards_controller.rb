@@ -26,6 +26,6 @@ class Api::PinstoboardsController < ApplicationController
     private
 
     def pinstoboard_params
-        params.require(:pinstoboard).permit(:pin_id, :board_id)
+        params.require(:pinstoboard).permit(:pin_id, :board_id, :unorganized_id)
     end
 end

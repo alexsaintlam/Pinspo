@@ -6,12 +6,24 @@ class BoardShow extends React.Component {
     componentDidMount() {
         this.props.fetchBoard(this.props.match.params.boardId);
         this.props.fetchUsers();
+        this.props.fetchFollows();
     }
 
     render() {
-        const { board, users } = this.props;
+        const { board, users, follows } = this.props;
         if (!users) return null;
         if (!board) return null;
+        let followerCount = 0;
+
+        const followerCounter = () => {
+            for (let key in follows) {
+                if (follows[key].followed_id === board.user_id) {
+                    followerCount += 1;
+                }
+            }
+
+            return followerCount;
+        }
 
         return(
             <div className="show-board">
@@ -23,7 +35,7 @@ class BoardShow extends React.Component {
                         <div className="show-dot">·</div>
                         <div className="show-board-desc">{board.description}</div>
                     </div>
-                    <div className="show-board-follows">229 Hardcoded</div>
+                    <div className="show-board-follows">{`${followerCounter()} followers`}</div>
                     <PinstoboardIndex board={board} />
                 </div>
             </div>

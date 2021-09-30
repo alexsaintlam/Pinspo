@@ -18,6 +18,7 @@ class BoardIndex extends React.Component {
             <div className="session-show-gallery">
                 {
                     profileBoardsArr.map(board => <BoardIndexItem
+                                                followerCount={this.props.followerCount}
                                                 pins={pins}
                                                 board={board}
                                                 deleteBoard={deleteBoard}

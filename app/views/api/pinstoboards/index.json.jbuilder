@@ -1,7 +1,7 @@
 if @pinstoboards
     @pinstoboards.each do |pinstoboard|
         json.set! pinstoboard.id do 
-            json.extract! pinstoboard, :id, :pin_id, :board_id
+            json.extract! pinstoboard, :id, :pin_id, :board_id, :unorganized_id
         end
     end
 end
