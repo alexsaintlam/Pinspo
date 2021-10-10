@@ -1,4 +1,5 @@
 # Pinspo
+<img src="https://github.com/alexsaintlam/Pinspo/blob/main/signup.JPG" style="height: 300px; width:500px;"></br>
 ### Overview
 Pinspo is a fullstack clone based on Pinterest.  Pinterest is an image sharing and social media service that allows users to discover and organize pictures onto digital pin-boards.  Users are also able to follow each other and interact with pictures by posting comments or replying with their own photos.  
 
