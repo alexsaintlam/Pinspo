@@ -3,13 +3,18 @@
   <head>
     <title>Pinspo</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="image" property="og:image" content="<%= image_url('pinspo.gif') %>" />
+    <meta name="description" content="_" />
+    <meta name="title" property="og:title" content="_" />
+    <meta property="og:type" content="_" />
+    <meta property='og:image' content="<%= image_url('pinspo.gif') %>"/>
+    <meta property="og:image" content="../assets/images/pinspo.gif" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-
+    <meta property="og:image" content="../assets/images/pinspo.gif" />
+    <meta property='og:image' content="<%= image_url('pinspo.gif') %>"/>
     <%= favicon_link_tag asset_path('pinfavicon.png') %>
 
     <script type="text/javascript">
