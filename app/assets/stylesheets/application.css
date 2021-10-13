@@ -467,14 +467,10 @@
     color: #0076D3;
 }
 
-.circle-button2 {
+.circle-button-auto-1 {
     margin: 3px;
-    color: #E1E1E1;
     cursor: pointer;
-}
-
-.circle-button2:focus {
-    color: #407857;
+    color: #0076D3;
 }
 
 .circle-button3 {
@@ -484,7 +480,29 @@
 }
 
 .circle-button3:focus {
+    color: #407857;
+}
+
+.circle-button-auto-2 {
+    margin: 3px;
+    cursor: pointer;
+    color: #407857;
+}
+
+.circle-button2 {
+    margin: 3px;
+    color: #E1E1E1;
+    cursor: pointer;
+}
+
+.circle-button2:focus {
     color: #C28B00;
+}
+
+.circle-button-auto-3 {
+    margin: 3px;
+    color: #C28B00;
+    cursor: pointer;
 }
 
 .circle-button4 {
@@ -495,6 +513,12 @@
 
 .circle-button4:focus {
     color: RGB(231, 93, 93);
+}
+
+.circle-button-auto-4 {
+    margin: 3px;
+    color: RGB(231, 93, 93);
+    cursor: pointer;
 }
 
 .splash-container1 {
@@ -1652,3 +1676,38 @@
     margin-top: 8px;
 }
 
+.add-drop-home {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    right: 1%;
+    bottom: 7.5%;
+    background-color: white;
+    border-radius: 8px;
+    margin-top: 8px;
+    width: 200px;
+    box-shadow: 0 1px 3px RGB(0,0,0,0.12), 0 1px 2px RGB(0,0,0,0.24);
+}
+
+.add-drop-home:hover {
+    background-color: #efefef;
+}
+
+.add-drop-button {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    box-shadow: 0 1px 3px RGB(0,0,0,0.12), 0 1px 2px RGB(0,0,0,0.24);
+}
+
+.add-drop-button:hover {
+    background-color: #efefef;
+}

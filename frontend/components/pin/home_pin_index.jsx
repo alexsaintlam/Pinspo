@@ -1,6 +1,7 @@
 import React from 'react';
 import PinIndexItem from './pin_index_item';
 import { Link } from 'react-router-dom';
+import HomePinCreate from './home_pin_create';
 
 class HomePinIndex extends React.Component {
     componentDidMount() {
@@ -16,6 +17,7 @@ class HomePinIndex extends React.Component {
         
         const homeIndex = () => (
             <div>
+                <HomePinCreate />
                 <div className="unorganized-gallery">
                     <div className="unorganized-image">
                         {
