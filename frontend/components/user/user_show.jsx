@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import FollowModal from '../modal/follow_modal';
 import NonSessionShow from './non_session_show_container';
 import SessionShow from './session_show_container';
