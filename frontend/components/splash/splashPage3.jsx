@@ -3,9 +3,6 @@ import { connect } from 'react-redux';
 import { fetchPins } from '../../actions/pin_actions';
 
 class SplashPage3 extends React.Component {
-    // componentDidMount() {
-    //     this.props.fetchPins();
-    // }
 
     render() {
         const { pins } = this.props;
