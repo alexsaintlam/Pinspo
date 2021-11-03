@@ -3,10 +3,6 @@ import { connect } from 'react-redux';
 import { fetchPins } from '../../actions/pin_actions';
 
 class SplashPage2 extends React.Component {
-    // componentDidMount() {
-    //     this.props.fetchPins();
-    // }
-
     render() {
         const { pins } = this.props;
         if (Object.values(pins).length < 1) return null;
