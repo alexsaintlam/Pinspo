@@ -15,7 +15,7 @@ const Greeting = ({ currentUser, openModal, users }) => {
             <div className="nav-fil"></div>
             <a href="https://linkedin.com/in/alexander-sk-lam" target="_blank">LinkedIn</a>
             <a href="https://github.com/alexsaintlam" target="_blank">Github</a>
-            <a href="url">Portfolio</a>
+            <a href="https://www.alexanderlam.dev/" target="_blank">Portfolio</a>
             <div className="nav-button">
                 <button onClick={() => openModal('login')} className="login-button">Log in</button>
             </div>
@@ -35,7 +35,7 @@ const Greeting = ({ currentUser, openModal, users }) => {
             </div>
             <a href="https://linkedin.com/in/alexander-sk-lam" target="_blank"><div className="icon"><LinkedInIcon /></div></a>
             <a href="https://github.com/alexsaintlam" target="_blank"><div className="icon"><GitHubIcon /></div></a>
-            <a href="https://github.com/alexsaintlam" target="_blank"><div className="icon"><PersonIcon /></div></a>
+            <a href="https://www.alexanderlam.dev/" target="_blank"><div className="icon"><PersonIcon /></div></a>
             <Link to={`/users/${currentUser.id}`}><div><img className="nav-avatar" src={users[currentUser.id].photoUrl} /></div></Link>
             <NavDrop />
         </div>
