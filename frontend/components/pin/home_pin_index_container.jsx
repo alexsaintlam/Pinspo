@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchPins, deletePin } from '../../actions/pin_actions';
+import { fetchPins } from '../../actions/pin_actions';
 import { fetchUsers } from '../../actions/user_actions';
 import { fetchPinstoboards } from '../../actions/pinstoboard_actions';
 import HomePinIndex from './home_pin_index';
