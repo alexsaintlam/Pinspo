@@ -4,6 +4,7 @@ class User < ApplicationRecord
     validates :username, :email, :age, :password_digest, :session_token, presence: true
     validates :username, :email, uniqueness: true
     validates :password, length: { minimum: 6 }, allow_nil: true
+    # validate :is_valid_email
 
     after_initialize :ensure_session_token
 
@@ -18,6 +19,22 @@ class User < ApplicationRecord
         primary_key: :id
 
     has_one_attached :photo
+
+    # def is_valid_email
+    #     parsed_email = [];
+    #     start = 0;
+
+    #     email.each_char.each.with_index do |char, index|
+    #         if char == '@' || char == '.' || index == email.length - 1
+    #             parsed_email.push(email[start..index])
+    #             start = index
+    #         end
+    #     end
+
+    #     if parsed_email.length != 3 || parsed_email[-1] != '.com'
+    #         errors.add(:email, "is not valid")
+    #     end
+    # end
 
     def self.generate_session_token
         SecureRandom.urlsafe_base64
