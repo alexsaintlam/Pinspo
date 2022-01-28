@@ -18,23 +18,23 @@ class User < ApplicationRecord
         foreign_key: :user_id,
         primary_key: :id
 
+    has_many :followeds,
+        class_name: :Follow,
+        foreign_key: :follower_id
+
+    has_many :followers,
+        class_name: :Follow,
+        foreign_key: :followed_id
+
+    has_many :followed_users,
+        through: :followeds,
+        source: :followed
+
+    has_many :follower_users,
+        through: :followers,
+        source: :follower
+
     has_one_attached :photo
-
-    # def is_valid_email
-    #     parsed_email = [];
-    #     start = 0;
-
-    #     email.each_char.each.with_index do |char, index|
-    #         if char == '@' || char == '.' || index == email.length - 1
-    #             parsed_email.push(email[start..index])
-    #             start = index
-    #         end
-    #     end
-
-    #     if parsed_email.length != 3 || parsed_email[-1] != '.com'
-    #         errors.add(:email, "is not valid")
-    #     end
-    # end
 
     def self.generate_session_token
         SecureRandom.urlsafe_base64

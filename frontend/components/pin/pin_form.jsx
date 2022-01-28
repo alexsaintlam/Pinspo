@@ -41,6 +41,9 @@ class PinForm extends React.Component {
 
     handleFile(e) {
         e.preventDefault();
+        const file = e.currentTarget.files[0];
+        const fileReader = new FileReader();
+        
         this.setState({ photoFile: e.currentTarget.files[0] })
         
     }

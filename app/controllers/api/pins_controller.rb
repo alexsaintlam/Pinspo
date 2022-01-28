@@ -11,10 +11,6 @@ class Api::PinsController < ApplicationController
     def create
         @pin = Pin.new(pin_params)
         
-        if DuplicatePhotoFetcher.new(@pin).fetch.exists?
-            debugger
-        end
-        
         if @pin.save
             render :show
         else
